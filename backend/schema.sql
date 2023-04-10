@@ -8,75 +8,75 @@ DROP TABLE IF EXISTS Title;
 DROP TABLE IF EXISTS viewer;
 
 CREATE TABLE viewer(
-    userId varchar(255),
+    user_id varchar(255),
     user_name varchar(255), 
     user_password varchar, 
-    genreCount int Array[24], 
-    PRIMARY KEY(userId),  
-    priorityLevel int
+    genre_count int Array[24],
+    priorityLevel int, 
+    PRIMARY KEY(user_id)
 );
 CREATE TABLE Title(
-    titleId SERIAL, 
-    titleType varchar(10), 
+    title_id SERIAL, 
+    title_type varchar(10), 
     title varchar(255), 
-    startYear char(4), 
-    endYear char(4), 
-    RuntimeMinutes int, 
-    genres varchar(20), 
+    start_year char(4), 
+    end_year char(4), 
+    runtime_minutes int, 
+    genres varchar(255), 
     link varchar(255), 
     views int, 
-    avgRating numeric(4,2), 
-    PRIMARY KEY(titleId)
+    avg_rating numeric(4,2), 
+    PRIMARY KEY(title_id)
 );
 CREATE TABLE Celebrities(
-    celebId int, 
-    primaryName varchar(255), 
-    birthYear char(4), 
-    deathYear char(4), 
-    primaryProfession varchar(20), 
-    Intro varchar, 
-    userId varchar(255), 
-    PRIMARY KEY(celebId), 
-    FOREIGN KEY(userId) REFERENCES viewer(userId)
+    celeb_id int, 
+    primary_name varchar(255), 
+    birth_year char(4), 
+    death_year char(4), 
+    primary_profession varchar(20), 
+    intro varchar, 
+    user_id varchar(255), 
+    PRIMARY KEY(celeb_id), 
+    FOREIGN KEY(user_id) REFERENCES viewer(user_id)
 );
 CREATE TABLE titleCast(
-    titleId int, 
-    celebId int, 
-    roleType varchar(20), 
-    roleName varchar(255), 
-    PRIMARY KEY(titleId, celebId, roleType, roleName), 
-    FOREIGN KEY(titleId) REFERENCES Title(titleId), 
-    FOREIGN KEY(celebId) REFERENCES Celebrities(celebId)
+    title_id int, 
+    celeb_id int, 
+    role_type varchar(20), 
+    role_name varchar(255), 
+    PRIMARY KEY(title_id, celeb_id, role_type, role_name), 
+    FOREIGN KEY(title_id) REFERENCES Title(title_id), 
+    FOREIGN KEY(celeb_id) REFERENCES Celebrities(celeb_id)
 );
 CREATE TABLE Awards(
-    awardId int, 
+    award_id int, 
     award_name varchar(20), 
     category varchar(60), 
     year char(4), 
-    titleId int, 
-    PRIMARY KEY(awardId), 
-    FOREIGN KEY(titleId) REFERENCES Title(titleId)
+    title_id int, 
+    PRIMARY KEY(award_id), 
+    FOREIGN KEY(title_id) REFERENCES Title(title_id)
 );
 CREATE TABLE celebAwards(
-    celebId int, 
-    awardId int, 
-    PRIMARY KEY(celebId, awardId), 
-    FOREIGN KEY(celebId) REFERENCES Celebrities(celebId), 
-    FOREIGN KEY(awardId) REFERENCES Awards(awardId)
+    celeb_id int, 
+    award_id int, 
+    PRIMARY KEY(celeb_id, award_id), 
+    FOREIGN KEY(celeb_id) REFERENCES Celebrities(celeb_id), 
+    FOREIGN KEY(award_id) REFERENCES Awards(award_id)
 );
 CREATE TABLE Reviews(
-    titleId int, 
-    userId varchar(255), 
-    reviewText varchar, 
+    title_id int, 
+    user_id varchar(255), 
+    review_text varchar, 
     rating int, 
-    PRIMARY KEY(titleId, userId), 
-    FOREIGN KEY (titleId) REFERENCES Title(titleId), 
-    FOREIGN KEY(userId) REFERENCES viewer(userId)
+    PRIMARY KEY(title_id, user_id), 
+    FOREIGN KEY (title_id) REFERENCES Title(title_id), 
+    FOREIGN KEY(user_id) REFERENCES viewer(user_id)
 );
 CREATE TABLE Watchlist(
-    titleId int, 
-    userId varchar, 
-    PRIMARY KEY(titleId, userId), 
-    FOREIGN KEY(titleId) REFERENCES Title(titleId), 
-    FOREIGN KEY(userId) REFERENCES viewer(userId)
+    title_id int, 
+    user_id varchar, 
+    PRIMARY KEY(title_id, user_id), 
+    FOREIGN KEY(title_id) REFERENCES Title(title_id), 
+    FOREIGN KEY(user_id) REFERENCES viewer(user_id)
 );
