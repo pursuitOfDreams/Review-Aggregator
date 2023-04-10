@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const sessions = require('express-session');
 const app = express();
@@ -15,12 +16,12 @@ app.use(cookieParser())
 //Middleware
 app.use(cors({
     credentials : true,
-    origin : "http://localhost:3000"
+    origin : process.env.FRONTEND_URL
 }))
 
 const oneDay = 1000 * 60 * 60 * 24;
 app.use(sessions({
-    secret: thisismysecrctekeyfhrgfgrfrty84fwir767,
+    secret: process.env.SESSION_SECRET,
     saveUninitialized:true,
     resave: false, 
     cookie: { 
@@ -31,6 +32,6 @@ app.use(sessions({
 
 app.use('/api/', AppRouter);
 
-app.listen(3001, () => {
-    console.log("server has started on port " + 3001);
+app.listen(process.env.BACKEND_PORT, () => {
+    console.log("server has started on port " + process.env.BACKEND_PORT);
 });
