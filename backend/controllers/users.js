@@ -5,6 +5,10 @@ const {
     insert_user
 } = require("../models/viewers");
 
+const { user_watchlist } = require("../models/watchlist");
+
+const { user_reviews } = require("../models/reviews");
+
 const check_auth = (req, res, next) => {
     if (req.session.is_logged_in) next();
     else return res.status(401).json({ message : "Failed to authenticate"})
@@ -77,10 +81,43 @@ const signup_user = async (req, res) => {
     }
 }
 
+const get_watchlist = async (req, res) => {
+    try{
+        if(req.session.is_logged_in){
+            const watchlist = await user_watchlist(req.session.user_id)
+            return res.status(201).json({
+                watchlist: watchlist
+            })
+        }
+        else return res.status(400).json({message : "Login to view watchlist"})
+    }
+    catch(err){
+        console.log(err)
+        return res.status(500).json({message : "Couldn't get watchlist"})
+    }
+}
+
+const get_reviews = async (req, res) => {
+    try{
+        if(req.session.is_logged_in){
+            const reviews = await user_reviews(req.session.user_id)
+            return res.status(201).json({
+                reviews : reviews
+            })
+        }
+        else return res.status(400).json({message : "Login to view reviews"})
+    }
+    catch(err){
+        console.log(err)
+        return res.status(500).json({message : "Couldn't get reviews"})
+    }
+}
 
 module.exports = {
     check_auth,
     login_user,
     logout,
-    signup_user
+    signup_user,
+    get_watchlist,
+    get_reviews
 }
