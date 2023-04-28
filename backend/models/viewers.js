@@ -22,6 +22,7 @@ const insert_user = (user_id, user_name, user_password) => {
     })
 }
 
+
 module.exports = {
     get_user_cred,
     insert_user
