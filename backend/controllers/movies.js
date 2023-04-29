@@ -125,4 +125,14 @@ const get_series_by_genre = async (req, res) => {
 
 
 
+module.exports ={
+    get_movie,
+    get_movie_list,
+    add_movie,
+    edit_movie,
+    get_top250_movies,
+    get_top250_series,
+    get_movie_by_genre,
+    get_series_by_genre
+}
 
