@@ -8,7 +8,8 @@ const {
     get_top250_movies,
     get_top250_series,
     get_movie_by_genre,
-    get_series_by_genre
+    get_series_by_genre,
+    get_rec
 } = require("../controllers/movies");
 
 movie_router.get("/", get_movie_list);
@@ -19,5 +20,6 @@ movie_router.get("/top250", get_top250_movies);
 movie_router.get("/genre/:genre_id", get_movie_by_genre);
 movie_router.get("/tvseries/top250", get_top250_series);
 movie_router.get("/tvseries/genre/:genre_id", get_series_by_genre);
+movie_router.get("/recommended", get_rec);
 
 module.exports = {movie_router};

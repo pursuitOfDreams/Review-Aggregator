@@ -35,7 +35,7 @@ const rem_post = (user_id, movie_id) => {
 
 const update_rating = (movie_id) => {
     return new Promise((resolve, reject) => {
-        pool.query('UPDATE title SET avgrating=(SELECT avg(rating) FROM reviews GROUP BY titleid HAVING titleid=$1) WHERE titleid=$1;',
+        pool.query('UPDATE title SET avgrating=(SELECT avg(rating) FROM reviews GROUP BY titleid HAVING titleid=$1) WHERE titleid=$1; UPDATE title SET votecount=(SELECT count(*) FROM reviews GROUP BY titleid HAVING titleid=$1;',
         [movie_id]
         , (err, results) => {
             if(err) reject(err);

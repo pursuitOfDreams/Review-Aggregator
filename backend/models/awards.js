@@ -2,7 +2,7 @@ const pool = require("../db");
 
 const get_movie_awards = (award_id) => {
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM title WHERE titleid in (SELECT titleid FROM awards WHERE awardid=$1;',[award_id]
+        pool.query('SELECT * FROM title WHERE titleid in (SELECT titleid FROM awards WHERE awardid=$1);',[award_id]
         , (err, results) => {
             if(err) reject(err);
             else resolve(results);
@@ -90,6 +90,26 @@ const indiv_awards = (award_id) => {
     })
 }
 
+const year_awards = (year) => {
+    return new Promise((resolve, reject) => {
+        pool.query('SELECT * FROM awards WHERE year=$1;',
+        [year], (err, results) => {
+            if(err) reject(err);
+            else resolve(results);
+        })
+    })
+}
+
+const type_awards = (type) => {
+    return new Promise((resolve, reject) => {
+        pool.query('SELECT * FROM awards WHERE award_name=$1;',
+        [type], (err, results) => {
+            if(err) reject(err);
+            else resolve(results);
+        })
+    })
+}
+
 module.exports = {
     get_movie_awards,
     is_movie,
@@ -99,5 +119,7 @@ module.exports = {
     is_celeb,
     add_award_celeb,
     get_all_awards,
-    indiv_awards
+    indiv_awards,
+    year_awards,
+    type_awards
 }

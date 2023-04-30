@@ -55,15 +55,21 @@ const get_top250_series_details = () => {
     })
 }
 
-const get_title_by_genre = (title_type, genres) => {
-    const query = "SELECT distinct * FROM title WHERE titleType =$1 AND genres LIKE ";
-    genres.forEach( (genre) => {
-        query = query + "\'%"+genre+"%\' ";
-    });
-    query = query + ";";
+const get_title_by_genre = (title_type, genre_id) => {
     return new Promise((resolve, reject) => {
-        pool.query(query,
-        [title_type]
+        pool.query("SELECT * FROM title WHERE titleid in (SELECT titleId FROM title_genre WHERE genreid=$2) AND titletype=$1;",
+        [title_type,genre_id]
+        , (err, results) => {
+            if (err) reject(err);
+            else resolve(results);
+        })
+    })
+}
+
+const recommend = (user_id) => {
+    return new Promise((resolve, reject) => {
+        pool.query("SELECT * FROM title WHERE titleid IN (SELECT titleid from title_genre WHERE genreid IN (SELECT genreid FROM genrecount WHERE userid=$1 ORDER BY val DESC LIMIT 3));",
+        [user_id]
         , (err, results) => {
             if (err) reject(err);
             else resolve(results);
@@ -77,5 +83,6 @@ module.exports = {
     add_title_to_db,
     get_top250_movie_details,
     get_top250_series_details,
-    get_title_by_genre
+    get_title_by_genre,
+    recommend
 }

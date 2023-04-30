@@ -71,9 +71,8 @@ const signup_user = async (req, res) => {
             req.session.is_logged_in = true;
             req.session.user_id = user_id;
             req.session.is_admin = false;
-            return res.status(201).json({
-                user_id : user_id,
-                user_name : user_name
+            return req.session.save((err)=>{
+                res.send({message : "User created"});
             })
         }
         else return res.status(400).json({message : "User with given ID already exist"});
