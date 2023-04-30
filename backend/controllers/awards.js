@@ -8,7 +8,9 @@ const {
     is_celeb,
     add_award_celeb,
     get_all_awards,
-    indiv_awards
+    indiv_awards,
+    year_awards,
+    type_awards
 } = require("../models/awards");
 
 const get_award = async (req, res) => {
@@ -116,11 +118,44 @@ const get_individual_awards = async (req, res) => {
     }
 }
 
+
+const get_year_awards = async (req, res) => {
+    try{
+        if(req.session.is_logged_in){
+            const year = req.params.year;
+            const awards = await year_awards(year);
+            return res.status(201).json({awards : awards});
+        }
+        else return res.status(400).json({message : "Login to get winner"})
+    }
+    catch (err) {
+        console.log(err);
+        return res.status(500).json({message : "Server error"});
+    }
+}
+
+const get_type_awards = async (req, res) => {
+    try{
+        if(req.session.is_logged_in){
+            const type = req.params.type;
+            const awards = await type_awards(type);
+            return res.status(201).json({awards : awards});
+        }
+        else return res.status(400).json({message : "Login to get winner"})
+    }
+    catch (err) {
+        console.log(err);
+        return res.status(500).json({message : "Server error"});
+    }
+}
+
 module.exports = {
     get_award,
     post_award,
     get_award_celeb,
     post_award_celeb,
     all_awards,
-    get_individual_awards
+    get_individual_awards,
+    get_year_awards,
+    get_type_awards
 }
