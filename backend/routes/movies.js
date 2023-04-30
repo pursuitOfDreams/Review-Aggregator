@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const movie_router = express.Router();
 const {
     get_movie,
     get_movie_list,
@@ -11,13 +11,13 @@ const {
     get_series_by_genre
 } = require("../controllers/movies");
 
-router.get("/", get_movie_list);
-router.get("/:movie_id", get_movie);
-router.post("/add", add_movie);
-router.put("/edit", edit_movie);
-router.get("/top250", get_top250_movies);
-router.get("/genre", get_movie_by_genre);
-router.get("/tvseries/top250", get_top250_series);
-router.get("/tvseries/genre", get_series_by_genre);
+movie_router.get("/", get_movie_list);
+movie_router.get("/:movie_id", get_movie);
+movie_router.post("/add", add_movie);
+movie_router.put("/edit", edit_movie);
+movie_router.get("/top250", get_top250_movies);
+movie_router.get("/genre", get_movie_by_genre);
+movie_router.get("/tvseries/top250", get_top250_series);
+movie_router.get("/tvseries/genre", get_series_by_genre);
 
-module.exports = router;
+module.exports = {movie_router};

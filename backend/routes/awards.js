@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const awards_router = express.Router();
 const {
     get_award,
     post_award,
@@ -8,10 +8,10 @@ const {
     all_awards
 } = require("../controllers/awards");
 
-router.get("/", all_awards);
-router.get("/movie", get_award);
-router.post("/movie", post_award);
-router.get("/celebrity", get_award_celeb);
-router.post("/celebrity", post_award_celeb);
+awards_router.get("/", all_awards);
+awards_router.get("/movie", get_award);
+awards_router.post("/movie", post_award);
+awards_router.get("/celebrity", get_award_celeb);
+awards_router.post("/celebrity", post_award_celeb);
 
-module.exports = router;
+module.exports = { awards_router };

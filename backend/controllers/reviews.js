@@ -11,7 +11,7 @@ const {
 const get_movie_reviews = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const movie_id = req.params.movie_id;
+            const movie_id = req.body.movie_id;
             const movie_reviews = await get_rev(movie_id);
             return res.status(200).json({reviews : movie_reviews});
         }
@@ -27,10 +27,10 @@ const get_movie_reviews = async (req, res) => {
 const post_movie_reviews = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const movie_id = req.params.movie_id;
-            const user_id = req.params.user_id;
-            const review_text = req.params.review_text;
-            const rating = req.params.rating;
+            const movie_id = req.body.movie_id;
+            const user_id = req.body.user_id;
+            const review_text = req.body.review_text;
+            const rating = req.body.rating;
             const posted = await has_posted(user_id, movie_id);
             if(posted.rows.length == 0)
             {
@@ -54,8 +54,8 @@ const post_movie_reviews = async (req, res) => {
 const get_review = async(req, res) => {
     try {
         if(req.session.is_logged_in){
-            const movie_id = req.params.movie_id;
-            const user_id = req.params.user_id;
+            const movie_id = req.body.movie_id;
+            const user_id = req.body.user_id;
             const single_review = await get_single_review(user_id, movie_id);
             if(single_review.rows.length == 0){
                 return res.status(404).json({message : "No such review found"});

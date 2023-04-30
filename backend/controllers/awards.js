@@ -13,12 +13,12 @@ const {
 const get_award = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const award_id = req.params.award_id
+            const award_id = req.body.award_id
             const movie_list = await get_movie_awards(award_id)
 
             return res.status(201).json({movie : movie_list})
         }
-        else return res.status(400).json({message : "Login to view movies list})
+        else return res.status(400).json({message : "Login to view movies list"})
     }
     catch(err){
         console.log(err)
@@ -29,10 +29,10 @@ const get_award = async (req, res) => {
 const post_award = async (req, res) => {
     try{
         if(req.session.is_logged_in && req.session.is_admin){
-            const award_name = req.params.award_name
-            const award_cat = req.params.award_cat
-            const year = req.params.year
-            const movie_id = req.params.movie_id
+            const award_name = req.body.award_name
+            const award_cat = req.body.award_cat
+            const year = req.body.year
+            const movie_id = req.body.movie_id
             const ins = await is_movie(movie_id)
             if(ins.rows.length == 0)
                 return res.status(400).json({message : "Movie does not exist"});
@@ -52,7 +52,7 @@ const post_award = async (req, res) => {
 const get_award_celeb = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const celeb_id = req.params.celeb_id
+            const celeb_id = req.body.celeb_id
             const awards = await get_celeb_award_id(celeb_id)
             return res.status(201).json({awards : awards})
         }
@@ -67,8 +67,8 @@ const get_award_celeb = async (req, res) => {
 const post_award_celeb = async (req, res) => {
     try{
         if(req.session.is_logged_in && req.session.is_admin){
-            const award_id = req.params.award_id;
-            const celeb_id = req.params.celeb_id;
+            const award_id = req.body.award_id;
+            const celeb_id = req.body.celeb_id;
             const aw = await is_award(award_id);
             if(aw.rows.length == 0)
                 return res.status(404).json({message : "Invalid Award Id"});
@@ -82,7 +82,7 @@ const post_award_celeb = async (req, res) => {
     }
     catch(err) {
         console.log(err);
-        return res.status(500).json({message : "Server Error});
+        return res.status(500).json({message : "Server Error"});
     }
 }
 

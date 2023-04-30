@@ -10,4 +10,4 @@ router.get("/movie", get_movie_reviews);
 router.post("/movie", post_movie_reviews);
 router.get("/user", get_review);
 
-module.exports = router;
+module.exports = { reviews_router : router };
