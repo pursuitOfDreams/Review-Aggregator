@@ -28,23 +28,19 @@ def main(args):
     with open("movie_genre.json", 'r') as f:
         data = json.load(f)
 
-    values = []
+    values = set()
     for genre in data["genres"]:
-        values.append(tuple([genre["id"], genre["name"]]))
-
-    query = "INSERT INTO genre VALUES %s"
-    execute_values(cursor, query, values)
-    connection.commit()
+        values.add(tuple([genre["id"], genre["name"]]))
 
     with open("tv_genre.json", 'r') as f:
         data = json.load(f)
 
-    values = []
     for genre in data["genres"]:
-        values.append(tuple([genre["id"], genre["name"]]))
+        values.add(tuple([genre["id"], genre["name"]]))
+
 
     query = "INSERT INTO genre VALUES %s"
-    execute_values(cursor, query, values)
+    execute_values(cursor, query, list(values))
     connection.commit()
 
     ########################### Movies Genre ############################
