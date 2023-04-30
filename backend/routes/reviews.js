@@ -6,7 +6,7 @@ const {
     get_review
 } = require("../controllers/reviews");
 
-router.get("/movie/", get_movie_reviews);
+router.get("/movie/:movie_id", get_movie_reviews);
 router.post("/movie", post_movie_reviews);
 router.post("/user", get_review);
 
