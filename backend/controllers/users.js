@@ -103,7 +103,7 @@ const get_watchlist = async (req, res) => {
 const add_watchlist = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const movie_id = req.body.movie_id
+            const movie_id = req.params.movie_id
             const reviews = await watchlist_add(req.session.user_id,movie_id)
             return res.status(201).json({
                 message : "Added to watchlist"
@@ -120,7 +120,7 @@ const add_watchlist = async (req, res) => {
 const get_reviews = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const user_id = req.body.user_id
+            const user_id = req.params.user_id
             const reviews = await user_reviews(user_id)
             return res.status(201).json({
                 reviews : reviews
@@ -137,7 +137,7 @@ const get_reviews = async (req, res) => {
 const delete_watchlist = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const movie_id = req.body.movie_id
+            const movie_id = req.params.movie_id
             const watch = await watchlist_delete(req.session.user_id, movie_id)
             return res.status(201).json({
                 message : "Deleted from watchlist"

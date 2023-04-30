@@ -11,7 +11,7 @@ user_router.get('/watchlist', get_watchlist);
 user_router.get('/watchlist/add', add_watchlist);
 user_router.get('/watchlist/delete', delete_watchlist);
 user_router.get('/reviews', get_reviews);
-user_router.get('/visit', update_count);
+user_router.post('/visit', update_count);
 
 module.exports = {
     auth_router,
