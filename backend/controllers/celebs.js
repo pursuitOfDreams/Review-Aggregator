@@ -1,7 +1,7 @@
 const pool = require("../db");
 
 const {
-    get_celeb_detail,
+    get_celeb_details,
     add_celeb_detail,
     is_celeb,
     update_celeb_detail,
@@ -13,7 +13,7 @@ const get_celeb_info = async (req, res) =>{
     try{
         if (req.session.is_logged_in){
             const { celeb_id } = req.body;
-            const celeb_details = await get_celeb_detail(celeb_id);
+            const celeb_details = await get_celeb_details(celeb_id);
             if (celeb_details.rows.length==0)
                 return res.status(404).json({message : "Celeb was not found with id ${celeb_id}"});
             return res.status(200).json({ celeb_info : celeb_details});
