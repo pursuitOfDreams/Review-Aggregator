@@ -66,11 +66,23 @@ const get_title_by_genre = (title_type, genre_id) => {
     })
 }
 
+const recommend = (user_id) => {
+    return new Promise((resolve, reject) => {
+        pool.query("SELECT * FROM title WHERE titleid IN (SELECT titleid from title_genre WHERE genreid IN (SELECT genreid FROM genrecount WHERE userid=$1 ORDER BY val DESC LIMIT 3));",
+        [user_id]
+        , (err, results) => {
+            if (err) reject(err);
+            else resolve(results);
+        })
+    })
+}
+
 module.exports = {
     get_movie_details,
     get_all_movies,
     add_title_to_db,
     get_top250_movie_details,
     get_top250_series_details,
-    get_title_by_genre
+    get_title_by_genre,
+    recommend
 }

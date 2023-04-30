@@ -4,7 +4,8 @@ const {
     get_all_movies,
     add_title_to_db,
     get_top250_series_details,
-    get_title_by_genre
+    get_title_by_genre,
+    recommend
 } = require("../models/movies");
 
 const get_movie = async (req, res) =>{
@@ -123,6 +124,21 @@ const get_series_by_genre = async (req, res) => {
     }
 }
 
+const get_rec = async (req, res) => {
+    try{
+        if (req.session.is_logged_in){
+            const user_id = req.session.user_id;
+            const recos = await recommend(user_id);
+            return res.status(200).json({recos : recos});
+        }
+        else return res.status(400).json({message : "Login to access the link"})
+    }
+    catch (err) {
+        console.log(err);
+        return res.status(500).json({message : "Server error"});
+    }
+}
+
 
 
 module.exports ={
@@ -133,6 +149,7 @@ module.exports ={
     get_top250_movies,
     get_top250_series,
     get_movie_by_genre,
-    get_series_by_genre
+    get_series_by_genre,
+    get_rec
 }
 
