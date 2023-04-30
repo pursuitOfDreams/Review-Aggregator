@@ -2,10 +2,11 @@ const pool = require("../db");
 const bcrypt = require("bcrypt")
 const {
     get_user_cred,
-    insert_user
+    insert_user,
+    count_update
 } = require("../models/viewers");
 
-const { user_watchlist } = require("../models/watchlist");
+const { user_watchlist, watchlist_add, watchlist_delete } = require("../models/watchlist");
 
 const { user_reviews } = require("../models/reviews");
 
@@ -96,10 +97,28 @@ const get_watchlist = async (req, res) => {
     }
 }
 
+const add_watchlist = async (req, res) => {
+    try{
+        if(req.session.is_logged_in){
+            const movie_id = req.body.movie_id
+            const reviews = await watchlist_add(req.session.user_id,movie_id)
+            return res.status(201).json({
+                message : "Added to watchlist"
+            })
+        }
+        else return res.status(400).json({message : "Login to add to watchlist"})
+    }
+    catch(err){
+        console.log(err)
+        return res.status(500).json({message : "Couldn't get reviews"})
+    }
+}
+
 const get_reviews = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const reviews = await user_reviews(req.session.user_id)
+            const user_id = req.body.user_id
+            const reviews = await user_reviews(user_id)
             return res.status(201).json({
                 reviews : reviews
             })
@@ -112,11 +131,50 @@ const get_reviews = async (req, res) => {
     }
 }
 
+const delete_watchlist = async (req, res) => {
+    try{
+        if(req.session.is_logged_in){
+            const movie_id = req.body.movie_id
+            const watch = await watchlist_delete(req.session.user_id, movie_id)
+            return res.status(201).json({
+                message : "Deleted from watchlist"
+            })
+        }
+        else return res.status(400).json({message : "Login to delete from watchlist"})
+    }
+    catch(err){
+        console.log(err)
+        return res.status(500).json({message : "Couldn't get reviews"})
+    }
+}
+
+const update_count = async (req, res) => {
+    try{
+        if(req.session.is_logged_in){
+            const { user_id, movie_id } = req.body
+            const reviews = await count_update(user_id, movie_id)
+            return res.status(201).json({
+                reviews : reviews
+            })
+        }
+        else return res.status(400).json({message : "Login to view reviews"})
+    }
+    catch(err){
+        console.log(err)
+        return res.status(500).json({message : "Couldn't get reviews"})
+    }
+}
+
+
+
 module.exports = {
     check_auth,
     login_user,
     logout,
     signup_user,
     get_watchlist,
-    get_reviews
+    get_reviews,
+    add_watchlist,
+    delete_watchlist,
+    update_count
 }

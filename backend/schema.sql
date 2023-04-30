@@ -6,14 +6,16 @@ DROP TABLE IF EXISTS titleCast;
 DROP TABLE IF EXISTS Celebrities;
 DROP TABLE IF EXISTS Title;
 DROP TABLE IF EXISTS viewer;
+DROP TABLE IF EXISTS TitleGenre;
+DROP TABLE IF EXISTS UserCounts;
 
 CREATE TABLE viewer(
     userId varchar(255),
     user_name varchar(255), 
     user_password varchar(255), 
     genreCount int Array[24], 
-    PRIMARY KEY(userId),  
-    priorityLevel int
+    priorityLevel int,
+    PRIMARY KEY(userId)
 );
 CREATE TABLE Title(
     titleId SERIAL, 
@@ -22,7 +24,6 @@ CREATE TABLE Title(
     startYear char(4), 
     endYear char(4), 
     RuntimeMinutes int, 
-    genres varchar, 
     link varchar(255), 
     views int, 
     avgRating numeric(4,2), 
@@ -30,6 +31,7 @@ CREATE TABLE Title(
     overview varchar,
     PRIMARY KEY(titleId)
 );
+
 CREATE TABLE Celebrities(
     celebId SERIAL, 
     primaryName varchar(255), 
@@ -83,4 +85,16 @@ CREATE TABLE Watchlist(
     FOREIGN KEY(titleId) REFERENCES Title(titleId), 
     FOREIGN KEY(userId) REFERENCES viewer(userId)
 );
-
+CREATE TABLE TitleGenre(
+    titleId int,
+    genre varchar,
+    PRIMARY KEY(titleId, genre),
+    FOREIGN KEY(titleId) REFERENCES Title(titleId)
+);
+CREATE TABLE UserCounts(
+    userid varchar(255),
+    genre varchar,
+    genre_count int,
+    PRIMARY KEY(userid, genre),
+    FOREIGN KEY(userid) REFERENCES Viewer(userid)
+);

@@ -22,8 +22,20 @@ const insert_user = (user_id, user_name, user_password) => {
     })
 }
 
+const count_update = (user_id, movie_id) => {
+    return new Promise((resolve, reject) => {
+        pool.query(';',
+        [user_id, movie_id]
+        , (err, results) => {
+            if (err) reject(err);
+            else resolve(results);
+        })
+    })
+}
+
 
 module.exports = {
     get_user_cred,
-    insert_user
+    insert_user,
+    count_update
 }
