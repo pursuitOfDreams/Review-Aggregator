@@ -78,6 +78,7 @@ def main(args):
         data = json.load(f)
 
     values = [] 
+    print(40*"="," title_genre ", 40*"=")
     for entry in data["results"]:
         tvId = entry["id"]
         genre_ids = entry["genre_ids"]
@@ -88,6 +89,53 @@ def main(args):
     execute_values(cursor, query, values)
     connection.commit()
 
+    ########################### Inserting Reviews ############################
+    movie_ids = []
+    with open("trending_movie.json",'r') as f:
+        data = json.load(f)
+    
+    for entry in data["results"]:
+        movie_ids.append(entry["id"])
+
+    celebs = set()
+    titleCast = []
+    print(40*"="," inserting Celebs ", 40*"=")
+    
+    with open("celebs.json", 'r') as f:
+        data = json.load(f)
+
+        for entry in data:
+            celebs.add(tuple([
+                entry["celeb id"],
+                entry["primaryName"],
+                entry["birthYear"], 
+                entry["deathYear"], 
+                entry["primaryProfession"], 
+                entry["Intro"],
+                entry["userId"],
+                entry["photo_link"]
+            ]))
+
+    query = "INSERT INTO Celebrities VALUES %s"
+    execute_values(cursor, query, list(celebs))
+    connection.commit()
+
+    print(40*"="," inserting titleCast ", 40*"=")
+
+    with open("titleCast.json", 'r') as f:
+        data = json.load(f)
+
+        for entry in data:
+            titleCast.append(tuple([
+                entry["titleId"],
+                entry["celebId"],
+                "acting", 
+                entry["roleName"]
+            ]))
+
+    query = "INSERT INTO titleCast VALUES %s"
+    execute_values(cursor, query, titleCast)
+    connection.commit()
 
     if connection:
         cursor.close()
