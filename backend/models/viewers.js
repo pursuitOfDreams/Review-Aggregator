@@ -2,7 +2,7 @@ const pool = require("../db");
 
 const get_user_cred = (user_id) =>{
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM viewer WHERE user_id = $1;',
+        pool.query('SELECT * FROM viewer WHERE userid = $1;',
         [user_id],
         (err, results) => {
             if (err) reject(err);
