@@ -10,6 +10,8 @@ def main(args):
     connection = psycopg2.connect(host = "localhost", port = "5432", database = "dbis_project", user = "postgres", password = "1234")
     cursor = connection.cursor()
 
+    cursor.execute(open("schema.sql", "r").read())
+    
     with open("trending_movie.json", 'r') as f:
         data = json.load(f)
 
@@ -19,7 +21,7 @@ def main(args):
     get_movie_link_api = f"https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key="
     ########################### Movie ############################
     for entry in data["results"]:
-        values.append(tuple([entry["id"], "movie", entry["title"], entry["release_date"], "", 0 , entry["vote_average"], entry["vote_count"], entry["backdrop_path"],entry["poster_path"], entry["overview"]]))
+        values.append(tuple([entry["id"], "movie", entry["title"], entry["release_date"], entry["video"], 0 , entry["vote_average"], entry["vote_count"], entry["backdrop_path"],entry["poster_path"], entry["overview"]]))
     query = "INSERT INTO title VALUES %s"
     execute_values(cursor, query, values)
     connection.commit()
