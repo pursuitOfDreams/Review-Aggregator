@@ -16,7 +16,7 @@ const get_movie = async (req, res) =>{
             if (movie_details.rows.length ==0 )
                 return res.status(404).json({message : "Movie with given id ${movie_id}"});
             
-            return res.status(201).json({movie : movie_details});
+            return res.status(200).json({movie : movie_details});
         }
         else return res.status(400).json({message : "Login to view movies list"})
     }

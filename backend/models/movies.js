@@ -13,7 +13,7 @@ const get_movie_details = (movie_id) => {
 
 const get_all_movies = () =>{
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM title sort by rating;',
+        pool.query('SELECT * FROM title order by avgrating;',
         []
         , (err, results) => {
             if (err) reject(err);
@@ -35,7 +35,7 @@ const add_title_to_db = (title_type, title, start_year, end_year, runtime_minute
 
 const get_top250_movie_details = () => {
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM title WHERE titleType =\"movie\" ORDER BY avg_rating LIMIT 250;',
+        pool.query('SELECT * FROM title WHERE titleType =\'movie\' ORDER BY avg_rating LIMIT 10;',
         []
         , (err, results) => {
             if (err) reject(err);
@@ -46,7 +46,7 @@ const get_top250_movie_details = () => {
 
 const get_top250_series_details = () => {
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM title WHERE titleType =\"series\" ORDER BY avg_rating LIMIT 250;',
+        pool.query('SELECT * FROM title WHERE titleType =\'TVseries\' ORDER BY avg_rating LIMIT 10;',
         []
         , (err, results) => {
             if (err) reject(err);

@@ -27,6 +27,7 @@ CREATE TABLE Title(
     views int, 
     avgRating numeric(4,2), 
     poster_link varchar,
+    overview varchar,
     PRIMARY KEY(titleId)
 );
 CREATE TABLE Celebrities(
