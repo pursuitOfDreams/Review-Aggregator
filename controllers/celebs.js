@@ -12,7 +12,7 @@ const {
 const get_celeb_info = async (req, res) =>{
     try{
         if (req.session.is_logged_in){
-            const celeb_id = req.params.celeb_id;
+            const { celeb_id } = req.body;
             const celeb_details = await get_celeb_details(celeb_id);
             if (celeb_details.rows.length==0)
                 return res.status(404).json({message : "Celeb was not found with id ${celeb_id}"});
@@ -62,7 +62,7 @@ const put_celeb_info  = async (req, res) =>{
 const get_movie_celeb_info = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const movie_id = req.params.movie_id;
+            const movie_id = req.body.movie_id;
             const celebs = await get_movie_celebs(movie_id);
             return res.status(200).json({ celebs : celebs});
         }

@@ -14,7 +14,7 @@ const {
 const get_award = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const award_id = req.params.award_id
+            const award_id = req.body.award_id
             const movie_list = await get_movie_awards(award_id)
 
             return res.status(201).json({movie : movie_list})
@@ -53,7 +53,7 @@ const post_award = async (req, res) => {
 const get_award_celeb = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const celeb_id = req.params.celeb_id
+            const celeb_id = req.body.celeb_id
             const awards = await get_celeb_award_id(celeb_id)
             return res.status(201).json({awards : awards})
         }
@@ -104,7 +104,7 @@ const all_awards = async (req, res) => {
 const get_individual_awards = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const award_id = req.params.award_id;
+            const award_id = req.body.award_id;
             const awards = await indiv_awards(award_id);
             return res.status(201).json({awards : awards});
         }

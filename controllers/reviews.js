@@ -11,7 +11,7 @@ const {
 const get_movie_reviews = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const movie_id = req.params.movie_id;
+            const movie_id = req.body.movie_id;
             const movie_reviews = await get_rev(movie_id);
             return res.status(200).json({reviews : movie_reviews});
         }
