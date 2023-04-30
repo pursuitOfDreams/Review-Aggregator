@@ -68,6 +68,9 @@ const signup_user = async (req, res) => {
             const salt = await bcrypt.genSalt(parseInt(process.env.SALT_ROUNDS));
             const hashed_password =await bcrypt.hash(password, salt)
             const user = await insert_user(user_id, user_name,hashed_password)
+            req.session.is_logged_in = true;
+            req.session.user_id = user_id;
+            req.session.is_admin = false;
             return res.status(201).json({
                 user_id : user_id,
                 user_name : user_name
