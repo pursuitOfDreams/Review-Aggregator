@@ -89,3 +89,15 @@ const indiv_awards = (award_id) => {
         })
     })
 }
+
+module.exports = {
+    get_movie_awards,
+    is_movie,
+    post_movie_award,
+    get_celeb_award_id,
+    is_award,
+    is_celeb,
+    add_award_celeb,
+    get_all_awards,
+    indiv_awards
+}
