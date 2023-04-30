@@ -3,32 +3,40 @@ DROP TABLE IF EXISTS Reviews;
 DROP TABLE IF EXISTS celebAwards;
 DROP TABLE IF EXISTS Awards;
 DROP TABLE IF EXISTS titleCast;
+DROP TABLE IF EXISTS title_genre;
 DROP TABLE IF EXISTS Celebrities;
 DROP TABLE IF EXISTS Title;
 DROP TABLE IF EXISTS viewer;
-DROP TABLE IF EXISTS TitleGenre;
-DROP TABLE IF EXISTS UserCounts;
+DROP TABLE IF EXISTS Genre;
 
 CREATE TABLE viewer(
     userId varchar(255),
     user_name varchar(255), 
     user_password varchar(255), 
-    priorityLevel int,
-    PRIMARY KEY(userId)
+    genreCount int Array[24], 
+    PRIMARY KEY(userId),  
+    priorityLevel int
 );
 CREATE TABLE Title(
-    titleId SERIAL, 
+    titleId int, 
     titleType varchar(10), 
     title varchar(255), 
-    startYear char(4), 
-    endYear char(4), 
-    RuntimeMinutes int, 
+    release_date date, 
+    -- RuntimeMinutes int, 
     link varchar(255), 
     views int, 
     avgRating numeric(4,2), 
+    voteCount int, 
+    backdrop_link varchar,
     poster_link varchar,
     overview varchar,
     PRIMARY KEY(titleId)
+);
+
+CREATE TABLE title_genre(
+    titleId int,
+    genreId int,
+    PRIMARY KEY(titleId, genreId)
 );
 
 CREATE TABLE Celebrities(
@@ -43,6 +51,7 @@ CREATE TABLE Celebrities(
     PRIMARY KEY(celebId), 
     FOREIGN KEY(userId) REFERENCES viewer(userId)
 );
+
 CREATE TABLE titleCast(
     titleId int, 
     celebId int, 
@@ -61,6 +70,7 @@ CREATE TABLE Awards(
     PRIMARY KEY(awardId), 
     FOREIGN KEY(titleId) REFERENCES Title(titleId)
 );
+
 CREATE TABLE celebAwards(
     celebId int, 
     awardId int, 
@@ -69,7 +79,7 @@ CREATE TABLE celebAwards(
     FOREIGN KEY(awardId) REFERENCES Awards(awardId)
 );
 CREATE TABLE Reviews(
-    titleId int, 
+    titleId int,
     userId varchar(255), 
     reviewText varchar, 
     rating int, 
@@ -84,16 +94,10 @@ CREATE TABLE Watchlist(
     FOREIGN KEY(titleId) REFERENCES Title(titleId), 
     FOREIGN KEY(userId) REFERENCES viewer(userId)
 );
-CREATE TABLE TitleGenre(
-    titleId int,
-    genre varchar,
-    PRIMARY KEY(titleId, genre),
-    FOREIGN KEY(titleId) REFERENCES Title(titleId)
+
+CREATE TABLE Genre(
+    genreId int,
+    genreName varchar
 );
-CREATE TABLE UserCounts(
-    userid varchar(255),
-    genre varchar,
-    genre_count int,
-    PRIMARY KEY(userid, genre),
-    FOREIGN KEY(userid) REFERENCES Viewer(userid)
-);
+
+

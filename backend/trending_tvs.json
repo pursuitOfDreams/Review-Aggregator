@@ -1,0 +1,453 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/3cgRI0hOq3dYyezSYrsfdmqxtMw.jpg",
+            "id": 114922,
+            "name": "Citadel",
+            "original_language": "en",
+            "original_name": "Citadel",
+            "overview": "What if you lost your memory? What if a spy didn’t know they were a spy? Years ago, the top agents of Citadel, Mason Kane and Nadia Sinh, had their minds wiped. But, they’re called back to action as sinister forces emerge from the past. With the help of spymaster Bernard Orlick, these former lovers must remember the past to save the future.",
+            "poster_path": "/AcrDB32TqpAGwvQFbICALGxSzn3.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18,
+                80,
+                10759
+            ],
+            "popularity": 218.446,
+            "first_air_date": "2023-04-27",
+            "vote_average": 8.317,
+            "vote_count": 30,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/vYm3JDA5ZZbs9hvLs0mPQzqaY95.jpg",
+            "id": 103768,
+            "name": "Sweet Tooth",
+            "original_language": "en",
+            "original_name": "Sweet Tooth",
+            "overview": "On a perilous adventure across a post-apocalyptic world, a lovable boy who's half-human and half-deer searches for a new beginning with a gruff protector.",
+            "poster_path": "/dBxxtfhC4vYrxB2fLsSxOTY2dQc.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18,
+                10765
+            ],
+            "popularity": 377.294,
+            "first_air_date": "2021-06-04",
+            "vote_average": 7.9,
+            "vote_count": 1108,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/pGtvfzfIRCsiudAWlzlGZ74co5l.jpg",
+            "id": 124800,
+            "name": "Love & Death",
+            "original_language": "en",
+            "original_name": "Love & Death",
+            "overview": "The true story of Candy and Pat Montgomery and Betty and Allan Gore – two churchgoing couples enjoying their small town Texas life… until an extramarital affair leads somebody to pick up an axe.",
+            "poster_path": "/8WchbT0UPQeo3PZ6G01fhccYaQB.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                80,
+                18
+            ],
+            "popularity": 197.707,
+            "first_air_date": "2023-04-27",
+            "vote_average": 8.81,
+            "vote_count": 21,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/zE9jOFPFCz30cFY606KdhHQbPhI.jpg",
+            "id": 221802,
+            "name": "The Nurse",
+            "original_language": "da",
+            "original_name": "Sygeplejersken",
+            "overview": "Pernille Kurzmann Larsen, a fresh-faced nurse at a hospital, begins to question the attention-seeking tendencies of her colleague, Christina Aistrup Hansen. As Pernille delves deeper into her suspicions, she starts to believe that Christina's behavior may be linked to a series of patient deaths.",
+            "poster_path": "/zxh9kjto6w8GMIEGigdLFot7pUK.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                80,
+                18
+            ],
+            "popularity": 93.18,
+            "first_air_date": "2023-04-27",
+            "vote_average": 7.5,
+            "vote_count": 14,
+            "origin_country": [
+                "DK"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nTvM4mhqNlHIvUkI1gVnW6XP7GG.jpg",
+            "id": 85937,
+            "name": "Demon Slayer: Kimetsu no Yaiba",
+            "original_language": "ja",
+            "original_name": "",
+            "overview": "It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family.",
+            "poster_path": "/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                16,
+                10759,
+                10765
+            ],
+            "popularity": 347.883,
+            "first_air_date": "2019-04-06",
+            "vote_average": 8.7,
+            "vote_count": 5108,
+            "origin_country": [
+                "JP"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/kD65OcLyMhvGJShWKqe4ILzpBOo.jpg",
+            "id": 138455,
+            "name": "Fatal Attraction",
+            "original_language": "en",
+            "original_name": "Fatal Attraction",
+            "overview": "An affair threatens the lives of Dan Gallagher and his wife, Beth,  in this deep-dive reimagining of the classic psychosexual thriller which explores fatal attraction and the timeless themes of marriage and infidelity through the lens of modern attitudes toward strong women, personality disorders and coercive control.",
+            "poster_path": "/gXxY9JQOXFBmedggz2fu5YKjIm.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 41.544,
+            "first_air_date": "2023-04-30",
+            "vote_average": 4.0,
+            "vote_count": 2,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6Lw54zxm6BAEKJeGlabyzzR5Juu.jpg",
+            "id": 82856,
+            "name": "The Mandalorian",
+            "original_language": "en",
+            "original_name": "The Mandalorian",
+            "overview": "After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes his way through the outer reaches, earning his keep as a bounty hunter.",
+            "poster_path": "/eU1i6eHXlzMOlEq0ku1Rzq7Y4wA.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                10765,
+                10759,
+                18
+            ],
+            "popularity": 774.794,
+            "first_air_date": "2019-11-12",
+            "vote_average": 8.481,
+            "vote_count": 8926,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/q3UGWifvIpdey1T2efX4dSmbZpU.jpg",
+            "id": 124364,
+            "name": "From",
+            "original_language": "en",
+            "original_name": "From",
+            "overview": "Unravel the mystery of a nightmarish town in middle America that traps all those who enter. As the unwilling residents fight to keep a sense of normalcy and search for a way out, they must also survive the threats of the surrounding forest – including the terrifying creatures that come out when the sun goes down.",
+            "poster_path": "/pnrv8tfOcWxu4CrB8N7xK0jYJsR.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                9648,
+                18,
+                10765
+            ],
+            "popularity": 406.025,
+            "first_air_date": "2022-02-20",
+            "vote_average": 8.3,
+            "vote_count": 291,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/a6ptrTUH1c5OdWanjyYtAkOuYD0.jpg",
+            "id": 37854,
+            "name": "One Piece",
+            "original_language": "ja",
+            "original_name": "",
+            "overview": "Years ago, the fearsome Pirate King, Gol D. Roger was executed leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new King of the Pirates.\n\nMonkey D. Luffy, a boy who consumed a \"Devil Fruit,\" decides to follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and that he's surrounded by a bevy of skilled fighters and thieves to help him along the way.\n\nLuffy will do anything to get the One Piece and become King of the Pirates!",
+            "poster_path": "/e3NBGiAifW9Xt8xD5tpARskjccO.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                10759,
+                35,
+                16
+            ],
+            "popularity": 150.186,
+            "first_air_date": "1999-10-20",
+            "vote_average": 8.7,
+            "vote_count": 3711,
+            "origin_country": [
+                "JP"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hYzfbfzsFRVtaCuumu0mFYtnZnE.jpg",
+            "id": 224490,
+            "name": "The Patients of Dr. García",
+            "original_language": "es",
+            "original_name": "",
+            "overview": "In 1936 Madrid, an idealistic doctor's life changes forever when he shelters a wounded spy and joins a decades-long fight against the spread of fascism.",
+            "poster_path": "/y57ND50yq0nPmQpvLmMBKrnAvRB.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 1.96,
+            "first_air_date": "2023-04-19",
+            "vote_average": 7.2,
+            "vote_count": 4,
+            "origin_country": [
+                "ES"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/kvahXe2tbPLG1jomPd2QaU1fKVX.jpg",
+            "id": 225008,
+            "name": "The Long Season",
+            "original_language": "zh",
+            "original_name": "",
+            "overview": "",
+            "poster_path": "/rM5Y0ziZbmpkqW1db2HK3xrzTXj.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18,
+                10751,
+                80
+            ],
+            "popularity": 20.664,
+            "first_air_date": "2023-04-22",
+            "vote_average": 10.0,
+            "vote_count": 4,
+            "origin_country": [
+                "CN"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/mhsu36Imq3GbtQSSmjmJGrDHAkE.jpg",
+            "id": 68398,
+            "name": "Dr. Romantic",
+            "original_language": "ko",
+            "original_name": "",
+            "overview": "An eccentric, triple board-certified virtuoso surgeon leaves a top job in Seoul and ends up at a provincial hospital, where he mentors young doctors.",
+            "poster_path": "/5WC5zEItQk7Av75osRRjbcKfHWD.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 138.863,
+            "first_air_date": "2016-11-07",
+            "vote_average": 8.0,
+            "vote_count": 58,
+            "origin_country": [
+                "KR"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ejEIt6TmywGov56dWDx0XWPP2NR.jpg",
+            "id": 156819,
+            "name": "Rabbit Hole",
+            "original_language": "en",
+            "original_name": "Rabbit Hole",
+            "overview": "Nothing is what it seems when John Weir, a master of deception in the world of corporate espionage, is framed for murder by powerful forces with the ability to influence and control populations.",
+            "poster_path": "/zb5MArsrMxK4mSSLzUmbfcXAc60.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 342.916,
+            "first_air_date": "2023-03-26",
+            "vote_average": 7.513,
+            "vote_count": 39,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg",
+            "id": 1399,
+            "name": "Game of Thrones",
+            "original_language": "en",
+            "original_name": "Game of Thrones",
+            "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+            "poster_path": "/7WUHnWGx5OO145IRxPDUkQSh4C7.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                10765,
+                18,
+                10759
+            ],
+            "popularity": 413.183,
+            "first_air_date": "2011-04-17",
+            "vote_average": 8.436,
+            "vote_count": 21015,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/euzOZte7gh2MvocsMbQlv0IoKFI.jpg",
+            "id": 203857,
+            "name": "The Diplomat",
+            "original_language": "en",
+            "original_name": "The Diplomat",
+            "overview": "In the midst of an international crisis, a career diplomat lands in a high-profile job she’s unsuited for, with tectonic implications for her marriage and her political future.",
+            "poster_path": "/cOKXV0FalCYixNmZYCfHXgyQ0VX.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 102.47,
+            "first_air_date": "2023-04-20",
+            "vote_average": 7.538,
+            "vote_count": 53,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/rqbCbjB19amtOtFQbb3K2lgm2zv.jpg",
+            "id": 1429,
+            "name": "Attack on Titan",
+            "original_language": "ja",
+            "original_name": "",
+            "overview": "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind.",
+            "poster_path": "/sHim6U0ANsbzxcmNRYuIubBVQaz.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                10765,
+                16,
+                10759
+            ],
+            "popularity": 90.798,
+            "first_air_date": "2013-04-07",
+            "vote_average": 8.654,
+            "vote_count": 5149,
+            "origin_country": [
+                "JP"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg",
+            "id": 100088,
+            "name": "The Last of Us",
+            "original_language": "en",
+            "original_name": "The Last of Us",
+            "overview": "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
+            "poster_path": "/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 648.207,
+            "first_air_date": "2023-01-15",
+            "vote_average": 8.747,
+            "vote_count": 3318,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/cTvQ1cIqFvytOGlD65WV56jB4fQ.jpg",
+            "id": 117465,
+            "name": "Hell's Paradise",
+            "original_language": "ja",
+            "original_name": "",
+            "overview": "A squad of prisoners and their guards are sent to investigate a mysterious island. They get stranded there and must rely on each other to survive the island's mysterious and monstrous residents.",
+            "poster_path": "/hYHXIqdi8bmbU7oZqgu9GW8hm8j.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                16,
+                18,
+                10759,
+                10765
+            ],
+            "popularity": 203.995,
+            "first_air_date": "2023-04-01",
+            "vote_average": 8.9,
+            "vote_count": 16,
+            "origin_country": [
+                "JP"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nA2sIDVxE6kcCPND0l5leTdodI5.jpg",
+            "id": 197548,
+            "name": "Mrs. Davis",
+            "original_language": "en",
+            "original_name": "Mrs. Davis",
+            "overview": "Sister Simone partners with her ex-boyfriend on a globe-spanning journey to destroy Mrs. Davis, a powerful artificial intelligence.",
+            "poster_path": "/tMr3mFACLuL4J7AEj8yDwcf5rnr.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                35,
+                18,
+                10765
+            ],
+            "popularity": 56.198,
+            "first_air_date": "2023-04-20",
+            "vote_average": 7.2,
+            "vote_count": 17,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/oSXHFbQN7QPE3WYlGm3rdNB3Qju.jpg",
+            "id": 218194,
+            "name": "Saint X",
+            "original_language": "en",
+            "original_name": "Saint X",
+            "overview": "A young woman's mysterious death during an idyllic Caribbean vacation creates a traumatic ripple effect that eventually pulls her surviving sister into a dangerous pursuit of the truth.",
+            "poster_path": "/wViKoQ7njLujruFWBMY5NUzj7EV.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                80,
+                18,
+                9648
+            ],
+            "popularity": 64.419,
+            "first_air_date": "2023-04-26",
+            "vote_average": 8.0,
+            "vote_count": 6,
+            "origin_country": [
+                "US"
+            ]
+        }
+    ],
+    "total_pages": 1000,
+    "total_results": 20000
+}
