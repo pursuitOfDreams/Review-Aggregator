@@ -7,7 +7,8 @@ const {
     is_award,
     is_celeb,
     add_award_celeb,
-    get_all_awards
+    get_all_awards,
+    indiv_awards
 } = require("../models/awards");
 
 const get_award = async (req, res) => {
@@ -100,10 +101,26 @@ const all_awards = async (req, res) => {
     }
 }
 
+const get_individual_awards = async (req, res) => {
+    try{
+        if(req.session.is_logged_in){
+            const award_id = req.body.award_id;
+            const awards = await indiv_awards(award_id);
+            return res.status(201).json({awards : awards});
+        }
+        else return res.status(400).json({message : "Login to get winner"})
+    }
+    catch (err) {
+        console.log(err);
+        return res.status(500).json({message : "Server error"});
+    }
+}
+
 module.exports = {
     get_award,
     post_award,
     get_award_celeb,
     post_award_celeb,
-    all_awards
+    all_awards,
+    get_individual_awards
 }
