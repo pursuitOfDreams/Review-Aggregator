@@ -13,7 +13,6 @@ CREATE TABLE viewer(
     userId varchar(255),
     user_name varchar(255), 
     user_password varchar(255), 
-    genreCount int Array[24], 
     priorityLevel int,
     PRIMARY KEY(userId)
 );
