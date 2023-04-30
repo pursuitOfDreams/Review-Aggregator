@@ -37,6 +37,7 @@ CREATE TABLE Celebrities(
     primaryProfession varchar(20), 
     Intro varchar, 
     userId varchar(255), 
+    photo_link varchar,
     PRIMARY KEY(celebId), 
     FOREIGN KEY(userId) REFERENCES viewer(userId)
 );
