@@ -2,7 +2,7 @@ const pool = require("../db");
 
 const get_celeb_details = (celeb_id) => {
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM celebrities WHERE celeb_id=$1;',
+        pool.query('SELECT * FROM celebrities WHERE celebid=$1;',
         [celeb_id]
         , (err, results) => {
             if (err) reject(err);
