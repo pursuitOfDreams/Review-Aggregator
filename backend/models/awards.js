@@ -73,7 +73,7 @@ const add_award_celeb = (award_id, celeb_id) => {
 const get_all_awards = () => {
     return new Promise((resolve, reject) => {
         pool.query('SELECT * FROM awards;',
-        [award_name, award_cat, year, movie_id], (err, results) => {
+        [], (err, results) => {
             if(err) reject(err);
             else resolve(results);
         })
@@ -82,8 +82,8 @@ const get_all_awards = () => {
 
 const indiv_awards = (award_id) => {
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM celebrities WHERE celebid IN (SELECT celebid FROM celebawards);',
-        [award_name, award_cat, year, movie_id], (err, results) => {
+        pool.query('SELECT * FROM celebrities WHERE celebid IN (SELECT celebid FROM celebawards WHERE awardid=$1);',
+        [award_id], (err, results) => {
             if(err) reject(err);
             else resolve(results);
         })
