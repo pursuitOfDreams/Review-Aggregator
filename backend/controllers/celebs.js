@@ -5,7 +5,8 @@ const {
     add_celeb_detail,
     is_celeb,
     update_celeb_detail,
-    get_movie_celebs
+    get_movie_celebs,
+    get_celebs
 } = require("../models/celebs");
 
 const get_celeb_info = async (req, res) =>{
@@ -60,9 +61,23 @@ const put_celeb_info  = async (req, res) =>{
 
 const get_movie_celeb_info = async (req, res) => {
     try{
-        if(req.session.is_logges_in){
+        if(req.session.is_logged_in){
             const movie_id = req.body.movie_id;
             const celebs = await get_movie_celebs(movie_id);
+            return res.status(200).json({ celebs : celebs});
+        }
+        else return res.status(400).json({message : "Login to get celebs"});
+    }
+    catch(err){
+        console.log(err);
+        return res.status(500).json({message : "Server error"})
+    }
+}
+
+const get_celeb_list = async (req, res) => {
+    try{
+        if(req.session.is_logged_in){
+            const celebs = await get_celebs();
             return res.status(200).json({ celebs : celebs});
         }
         else return res.status(400).json({message : "Login to get celebs"});
@@ -78,5 +93,6 @@ module.exports = {
     get_celeb_info,
     post_celeb_info,
     put_celeb_info,
-    get_movie_celeb_info
+    get_movie_celeb_info,
+    get_celeb_list
 }

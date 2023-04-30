@@ -22,7 +22,7 @@ const watchlist_delete = (user_id, title_id) => {
     })
 }
 
-const watchlist_add = (user_id, title_id)
+const watchlist_add = (user_id, title_id) => {
     return new Promise((resolve, reject) => {
         pool.query('INSERT INTO watchlist VALUES($1,$2);',
         [title_id,user_id]

@@ -56,10 +56,22 @@ const get_movie_celebs = (movie_id) => {
     })
 }
 
+const get_celebs = () => {
+    return new Promise((resolve, reject) => {
+        pool.query('SELECT * FROM celebrities;',
+        []
+        , (err, results) => {
+            if (err) reject(err);
+            else resolve(results);
+        })
+    })
+}
+
 module.exports ={
     get_celeb_details,
     add_celeb_detail,
     is_celeb,
     update_celeb_detail,
-    get_movie_celebs
+    get_movie_celebs,
+    get_celebs
 }
