@@ -40,7 +40,6 @@ const login_user = async (req, res) =>{
                 res.send({message : "user logged in"});
             })
         }
-        // couldn't find the user in the database
         else return res.status(401).json({message :"Could not find the user with the given user ID"});
     }
     catch (err) {

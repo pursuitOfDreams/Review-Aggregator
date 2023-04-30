@@ -13,7 +13,7 @@ const get_movie_details = (movie_id) => {
 
 const get_all_movies = () =>{
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM title WHERE titleType=\"movie\";',
+        pool.query('SELECT * FROM title sort by rating;',
         []
         , (err, results) => {
             if (err) reject(err);
