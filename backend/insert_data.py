@@ -67,7 +67,7 @@ def main(args):
         data = json.load(f)
    
     for entry in data["results"]:
-        values.append(tuple([entry["id"], "tv", entry["name"], entry["first_air_date"], "", 0 , entry["vote_average"], entry["vote_count"], entry["backdrop_path"],entry["poster_path"], entry["overview"]]))
+        values.append(tuple([entry["id"], "tv", entry["name"], entry["first_air_date"], entry["video"], 0 , entry["vote_average"], entry["vote_count"], entry["backdrop_path"],entry["poster_path"], entry["overview"]]))
     query = "INSERT INTO title VALUES %s"
     execute_values(cursor, query, values)
     connection.commit()
