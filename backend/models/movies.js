@@ -55,15 +55,10 @@ const get_top250_series_details = () => {
     })
 }
 
-const get_title_by_genre = (title_type, genres) => {
-    const query = "SELECT distinct * FROM title WHERE titleType =$1 AND genres LIKE ";
-    genres.forEach( (genre) => {
-        query = query + "\'%"+genre+"%\' ";
-    });
-    query = query + ";";
+const get_title_by_genre = (title_type, genre_id) => {
     return new Promise((resolve, reject) => {
-        pool.query(query,
-        [title_type]
+        pool.query("SELECT * FROM title WHERE titleid in (SELECT titleId FROM title_genre WHERE genreid=$2) AND titletype=$1;",
+        [title_type,genre_id]
         , (err, results) => {
             if (err) reject(err);
             else resolve(results);

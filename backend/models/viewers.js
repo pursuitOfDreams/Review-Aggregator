@@ -24,7 +24,7 @@ const insert_user = (user_id, user_name, user_password) => {
 
 const count_update = (user_id, movie_id) => {
     return new Promise((resolve, reject) => {
-        pool.query(';',
+        pool.query('UPDATE genre_count SET val=val+1 WHERE genreid IN (SELECT genreid FROM title_genre WHERE titleid=$2) AND userid=$1;',
         [user_id, movie_id]
         , (err, results) => {
             if (err) reject(err);

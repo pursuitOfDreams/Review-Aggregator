@@ -96,6 +96,7 @@ CREATE TABLE Genre(
 CREATE TABLE genre_count(
     userid varchar(255),
     genreId int,
+    val int,
     PRIMARY KEY(userid, genreId),
     FOREIGN KEY(userid) REFERENCES viewer(userid),
     FOREIGN KEY(genreId) REFERENCES Genre(genreId)

@@ -2,7 +2,7 @@ const pool = require("../db");
 
 const get_movie_awards = (award_id) => {
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM title WHERE titleid in (SELECT titleid FROM awards WHERE awardid=$1;',[award_id]
+        pool.query('SELECT * FROM title WHERE titleid in (SELECT titleid FROM awards WHERE awardid=$1);',[award_id]
         , (err, results) => {
             if(err) reject(err);
             else resolve(results);
