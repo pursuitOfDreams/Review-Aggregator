@@ -3,7 +3,7 @@ from psycopg2.extras import execute_values
 import csv
 import sys
 import json
-
+import requests
 
 
 def main(args):
@@ -15,6 +15,8 @@ def main(args):
 
     values =  []
     api = "https://api.themoviedb.org/3/trending/movie/day?api_key=5db95b8fefe73bdb564f6c4f03c46d72"
+    movie_id = ""
+    get_movie_link_api = f"https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key="
     ########################### Movie ############################
     for entry in data["results"]:
         values.append(tuple([entry["id"], "movie", entry["title"], entry["release_date"], "", 0 , entry["vote_average"], entry["vote_count"], entry["backdrop_path"],entry["poster_path"], entry["overview"]]))
@@ -23,7 +25,18 @@ def main(args):
     connection.commit()
 
     ########################### Genre ############################
-    with open("genre.json", 'r') as f:
+    with open("movie_genre.json", 'r') as f:
+        data = json.load(f)
+
+    values = []
+    for genre in data["genres"]:
+        values.append(tuple([genre["id"], genre["name"]]))
+
+    query = "INSERT INTO genre VALUES %s"
+    execute_values(cursor, query, values)
+    connection.commit()
+
+    with open("tv_genre.json", 'r') as f:
         data = json.load(f)
 
     values = []
@@ -87,21 +100,6 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--name")
-    parser.add_argument("--user")
-    parser.add_argument("--pswd")
-    parser.add_argument("--host")
-    parser.add_argument("--port")
-    parser.add_argument("--import-table-data", action='store_true')
-    parser.add_argument("--export-table-data", action='store_true')
-    parser.add_argument("--show-tables", action='store_true')
-    parser.add_argument("--show-table-schema", action='store_true')
-    parser.add_argument("--table")
-    parser.add_argument("--format")
-    parser.add_argument("--import-sql", action='store_true')
-    parser.add_argument("--path")
-    parser.add_argument("--export-database-schema", action='store_true')
-    parser.add_argument("--testing", action = 'store_true')
-
+    
     args = parser.parse_args()
     main(args)
