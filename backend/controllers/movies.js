@@ -100,7 +100,7 @@ const get_top250_series = async (req, res) => {
 const get_movie_by_genre = async (req, res) => {
     try{
         if (req.session.is_logged_in){
-            const genres = req.params.genre_id;
+            const genres = req.params.genre_value;
             const movies_by_genre = await get_title_by_genre("movie", genres);
             return res.status(200).json({movies_list_by_genre : movies_by_genre});
         }
@@ -115,8 +115,8 @@ const get_movie_by_genre = async (req, res) => {
 const get_series_by_genre = async (req, res) => {
     try{
         if (req.session.is_logged_in){
-            const genres = req.params.genre_id;
-            const series_by_genre = await get_title_by_genre("series", genres);
+            const genres = req.params.genre_value;
+            const series_by_genre = await get_title_by_genre("tv", genres);
             return res.status(200).json({series_list_by_genre : series_by_genre});
         }
         else return res.status(400).json({message : "Login to access the link"})

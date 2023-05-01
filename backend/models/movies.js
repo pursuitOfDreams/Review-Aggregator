@@ -46,7 +46,7 @@ const get_top250_movie_details = () => {
 
 const get_top250_series_details = () => {
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM title WHERE titleType =\'TVseries\' ORDER BY avgrating LIMIT 10;',
+        pool.query('SELECT * FROM title WHERE titleType =\'tv\' ORDER BY avgrating LIMIT 10;',
         []
         , (err, results) => {
             if (err) reject(err);
@@ -55,10 +55,10 @@ const get_top250_series_details = () => {
     })
 }
 
-const get_title_by_genre = (title_type, genre_id) => {
+const get_title_by_genre = (title_type, genre_value) => {
     return new Promise((resolve, reject) => {
-        pool.query("SELECT * FROM title WHERE titleid in (SELECT titleId FROM title_genre WHERE genreid=$2) AND titletype=$1;",
-        [title_type,genre_id]
+        pool.query("SELECT * FROM title WHERE titleid in (SELECT titleId FROM title_genre WHERE genreid in (SELECT genreid FROM genre WHERE genrename=$2)) AND titletype=$1;",
+        [title_type,genre_value]
         , (err, results) => {
             if (err) reject(err);
             else resolve(results);
