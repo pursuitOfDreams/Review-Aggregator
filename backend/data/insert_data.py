@@ -101,7 +101,7 @@ def main(args):
     titleCast = []
     print(40*"="," inserting Celebs ", 40*"=")
     
-    with open("celebs.json", 'r') as f:
+    with open("celebs_new.json", 'r') as f:
         data = json.load(f)
 
         for entry in data:
@@ -122,7 +122,7 @@ def main(args):
 
     print(40*"="," inserting titleCast ", 40*"=")
 
-    with open("titleCast.json", 'r') as f:
+    with open("titleCast_new.json", 'r') as f:
         data = json.load(f)
 
         for entry in data:
