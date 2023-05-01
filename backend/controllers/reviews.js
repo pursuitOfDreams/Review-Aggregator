@@ -28,7 +28,7 @@ const post_movie_reviews = async (req, res) => {
     try{
         if(req.session.is_logged_in){
             const movie_id = req.body.movie_id;
-            const user_id = req.body.user_id;
+            const user_id = req.session.user_id;
             const review_text = req.body.review_text;
             const rating = req.body.rating;
             const posted = await has_posted(user_id, movie_id);
