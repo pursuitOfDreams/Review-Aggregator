@@ -25,7 +25,7 @@ const insert_user = (user_id, user_name, user_password) => {
 const insert_user_genre = (user_id, user_name, user_password) => {
     return new Promise((resolve, reject) => {
         pool.query('INSERT INTO genre_count (SELECT $1,genreid,0 FROM genre);',
-        [user_id, user_name, user_password]
+        [user_id]
         , (err, results) => {
             if (err) reject(err);
             else resolve(results);
