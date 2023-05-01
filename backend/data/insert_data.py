@@ -12,16 +12,48 @@ def main(args):
 
     cursor.execute(open("schema.sql", "r").read())
     
-    with open("trending_movie.json", 'r') as f:
-        data = json.load(f)
-
-    values =  []
+   
     api = "https://api.themoviedb.org/3/trending/movie/day?api_key=5db95b8fefe73bdb564f6c4f03c46d72"
     movie_id = ""
     get_movie_link_api = f"https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key="
     ########################### Movie ############################
+    values = set()
+    with open("trending_movie.json", 'r') as f:
+        data = json.load(f)
+
     for entry in data["results"]:
-        values.append(tuple([entry["id"], "movie", entry["title"], entry["release_date"], entry["video"], 0 , entry["vote_average"], entry["vote_count"], entry["backdrop_path"],entry["poster_path"], entry["overview"]]))
+        values.add(tuple([
+            entry["id"], 
+            "movie", 
+            entry["title"], 
+            entry["release_date"], 
+            entry["video"], 
+            0 , 
+            entry["vote_average"], 
+            entry["vote_count"], 
+            entry["backdrop_path"],
+            entry["poster_path"], 
+            entry["overview"]
+        ]))
+    
+    with open("top_rated_movie.json", 'r') as f:
+        data = json.load(f)
+
+    for entry in data["results"]:
+        values.add(tuple([
+            entry["id"], 
+            "movie", 
+            entry["title"], 
+            entry["release_date"], 
+            entry["video"], 
+            0 , 
+            entry["vote_average"], 
+            entry["vote_count"], 
+            entry["backdrop_path"],
+            entry["poster_path"], 
+            entry["overview"]
+        ]))
+    
     query = "INSERT INTO title VALUES %s"
     execute_values(cursor, query, values)
     connection.commit()
@@ -49,47 +81,97 @@ def main(args):
     with open("trending_movie.json", 'r') as f:
         data = json.load(f)
 
-    values = [] 
+    values = set()
     for entry in data["results"]:
         movieId = entry["id"]
         genre_ids = entry["genre_ids"]
         for id in genre_ids:
-            values.append(tuple([movieId, id]))
+            values.add(tuple([movieId, id]))
+
+    with open("top_rated_movie.json", 'r') as f:
+        data = json.load(f)
+
+    for entry in data["results"]:
+        movieId = entry["id"]
+        genre_ids = entry["genre_ids"]
+        for id in genre_ids:
+            values.add(tuple([movieId, id]))
 
     query = "INSERT INTO title_genre VALUES %s"
     execute_values(cursor, query, values)
     connection.commit()
 
-
-    values = []
     ########################### TV ############################
+    values = set()
     with open("trending_tvs.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
    
     for entry in data["results"]:
-        values.append(tuple([entry["id"], "tv", entry["name"], entry["first_air_date"], entry["video"], 0 , entry["vote_average"], entry["vote_count"], entry["backdrop_path"],entry["poster_path"], entry["overview"]]))
+        values.add(tuple([
+            entry["id"],
+            "tv", 
+            entry["name"], 
+            entry["first_air_date"], 
+            entry["video"], 
+            0 , 
+            entry["vote_average"], 
+            entry["vote_count"], 
+            entry["backdrop_path"],
+            entry["poster_path"], 
+            entry["overview"]
+        ]))
+    
+    with open("top_rated_tv.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    for entry in data["results"]:
+        values.add(tuple([
+            entry["id"], 
+            "tv", 
+            entry["name"], 
+            entry["first_air_date"], 
+            entry["video"], 
+            0 , 
+            entry["vote_average"], 
+            entry["vote_count"], 
+            entry["backdrop_path"],
+            entry["poster_path"], 
+            entry["overview"]
+        ]))
+    
     query = "INSERT INTO title VALUES %s"
+
     execute_values(cursor, query, values)
     connection.commit()
     
-    values =[]
+
     ########################### TV genre ############################
+    print(40*"="," title_genre ", 40*"=")
+
     with open("trending_tvs.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    values = [] 
-    print(40*"="," title_genre ", 40*"=")
+    values = set()
     for entry in data["results"]:
         tvId = entry["id"]
         genre_ids = entry["genre_ids"]
         for id in genre_ids:
-            values.append(tuple([tvId, id]))
+            values.add(tuple([tvId, id]))
 
+    with open("top_rated_tv.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    for entry in data["results"]:
+        tvId = entry["id"]
+        genre_ids = entry["genre_ids"]
+        for id in genre_ids:
+            values.add(tuple([tvId, id]))
+    
     query = "INSERT INTO title_genre VALUES %s"
     execute_values(cursor, query, values)
     connection.commit()
 
-    ########################### Inserting Reviews ############################
+    ########################### Inserting Celebs ############################
     movie_ids = []
     with open("trending_movie.json",'r') as f:
         data = json.load(f)
@@ -101,7 +183,7 @@ def main(args):
     titleCast = []
     print(40*"="," inserting Celebs ", 40*"=")
     
-    with open("celebs_new.json", 'r') as f:
+    with open("celebs_big.json", 'r') as f:
         data = json.load(f)
 
         for entry in data:
@@ -122,7 +204,7 @@ def main(args):
 
     print(40*"="," inserting titleCast ", 40*"=")
 
-    with open("titleCast_new.json", 'r') as f:
+    with open("titleCast_big.json", 'r') as f:
         data = json.load(f)
 
         for entry in data:
