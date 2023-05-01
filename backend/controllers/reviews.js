@@ -5,7 +5,8 @@ const {
     rem_post,
     update_rating,
     post_rev,
-    get_single_review
+    get_single_review,
+    update_count
 } = require("../models/review_model");
 
 const get_movie_reviews = async (req, res) => {
@@ -32,10 +33,11 @@ const post_movie_reviews = async (req, res) => {
             const reviewtext = req.body.review_text;
             const rating = req.body.rating;
             const posted = await has_posted(user_id, movie_id);
-            if(posted.rows.length == 0)
+            if(posted.rows.length != 0)
             {
                 const rem = await rem_post(user_id, movie_id);
                 const update = await update_rating(movie_id);
+                const count = await update_count(movie_id);
             }
             const post = await post_rev(movie_id, user_id, reviewtext, rating);
             const update = await update_rating(movie_id);

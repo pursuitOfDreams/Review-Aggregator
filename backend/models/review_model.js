@@ -83,5 +83,6 @@ module.exports = {
     rem_post,
     update_rating,
     post_rev,
-    get_single_review
+    get_single_review,
+    update_count
 }
