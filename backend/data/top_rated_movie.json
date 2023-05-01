@@ -15,7 +15,7 @@
             "poster_path": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
             "release_date": "1972-03-14",
             "title": "The Godfather",
-            "video": "https://www.youtube.com/watch?v=UaVTIH8mujA&pp=ygUNVGhlIGdvZGZhdGhlcg%3D%3D",
+            "video": "https://www.youtube.com/embed/UaVTIH8mujA",
             "vote_average": 8.7,
             "vote_count": 17826
         },
@@ -33,7 +33,7 @@
             "poster_path": "/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
             "release_date": "1994-09-23",
             "title": "The Shawshank Redemption",
-            "video": "https://www.youtube.com/watch?v=NmzuHjWmXOc&pp=ygUYVGhlIFNoYXdzaGFuayBSZWRlbXB0aW9u",
+            "video": "https://www.youtube.com/embed/NmzuHjWmXOc",
             "vote_average": 8.7,
             "vote_count": 23682
         },
@@ -51,7 +51,7 @@
             "poster_path": "/6gIJuFHh5Lj4dNaPG3TzIMl7L68.jpg",
             "release_date": "2022-09-14",
             "title": "Cuando Sea Joven",
-            "video": "https://www.youtube.com/watch?v=w_4DJov6m6E&pp=ygUQQ3VhbmRvIFNlYSBKb3Zlbg%3D%3D",
+            "video": "https://www.youtube.com/embed/w_4DJov6m6E",
             "vote_average": 8.6,
             "vote_count": 213
         },
@@ -69,7 +69,7 @@
             "poster_path": "/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
             "release_date": "1974-12-20",
             "title": "The Godfather Part II",
-            "video": "https://www.youtube.com/watch?v=9O1Iy9od7-A&pp=ygUVVGhlIEdvZGZhdGhlciBQYXJ0IElJ",
+            "video": "https://www.youtube.com/embed/9O1Iy9od7-A",
             "vote_average": 8.6,
             "vote_count": 10787
         },
@@ -88,7 +88,7 @@
             "poster_path": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
             "release_date": "1993-12-15",
             "title": "Schindler's List",
-            "video": "https://www.youtube.com/watch?v=mxphAlJID9U&pp=ygUQU2NoaW5kbGVyJ3MgTGlzdA%3D%3D",
+            "video": "https://www.youtube.com/embed/mxphAlJID9U",
             "vote_average": 8.6,
             "vote_count": 14003
         },
@@ -107,7 +107,7 @@
             "poster_path": "/ktejodbcdCPXbMMdnpI9BUxW6O8.jpg",
             "release_date": "1995-10-19",
             "title": "Dilwale Dulhania Le Jayenge",
-            "video": "https://www.youtube.com/watch?v=oIZ4U21DRlM&pp=ygUlRGlsd2FsZSBEdWxoYW5peWEgbGUgamFheWVuZ2UgdHJhaWxlcg%3D%3D",
+            "video": "https://www.youtube.com/embed/oIZ4U21DRlM",
             "vote_average": 8.6,
             "vote_count": 4114
         },
@@ -126,7 +126,7 @@
             "poster_path": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
             "release_date": "2001-07-20",
             "title": "Spirited Away",
-            "video": "https://www.youtube.com/watch?v=ByXuk9QqQkk&pp=ygUNU3Bpcml0ZWQgQXdheQ%3D%3D",
+            "video": "https://www.youtube.com/embed/ByXuk9QqQkk",
             "vote_average": 8.5,
             "vote_count": 14222
         },
@@ -143,7 +143,7 @@
             "poster_path": "/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg",
             "release_date": "1957-04-10",
             "title": "12 Angry Men",
-            "video": "https://www.youtube.com/watch?v=TEN-2uTi2c0&pp=ygUMMTIgQW5ncnkgTWVu",
+            "video": "https://www.youtube.com/embed/TEN-2uTi2c0",
             "vote_average": 8.5,
             "vote_count": 7218
         },
@@ -162,7 +162,7 @@
             "poster_path": "/q719jXXEzOoYaps6babgKnONONX.jpg",
             "release_date": "2016-08-26",
             "title": "Your Name.",
-            "video": "https://www.youtube.com/watch?v=xU47nhruN-Q&pp=ygUJWW91ciBuYW1l",
+            "video": "https://www.youtube.com/embed/xU47nhruN-Q",
             "vote_average": 8.5,
             "vote_count": 9748
         },
@@ -181,7 +181,7 @@
             "poster_path": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
             "release_date": "2019-05-30",
             "title": "Parasite",
-            "video": "https://www.youtube.com/watch?v=5xH0HfJHsaY&pp=ygUIUGFyYXNpdGU%3D",
+            "video": "https://www.youtube.com/embed/5xH0HfJHsaY",
             "vote_average": 8.5,
             "vote_count": 15635
         },
@@ -201,7 +201,7 @@
             "poster_path": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
             "release_date": "2008-07-14",
             "title": "The Dark Knight",
-            "video": "https://www.youtube.com/watch?v=EXeTwQWrcwY&pp=ygUPVGhlIERhcmsgS25pZ2h0",
+            "video": "https://www.youtube.com/embed/EXeTwQWrcwY",
             "vote_average": 8.5,
             "vote_count": 29594
         },
@@ -220,7 +220,7 @@
             "poster_path": "/o0lO84GI7qrG6XFvtsPOSV7CTNa.jpg",
             "release_date": "1999-12-10",
             "title": "The Green Mile",
-            "video": "https://www.youtube.com/watch?v=Ki4haFrqSrw&pp=ygUOVGhlIEdyZWVuIE1pbGU%3D",
+            "video": "https://www.youtube.com/embed/Ki4haFrqSrw",
             "vote_average": 8.5,
             "vote_count": 15330
         },
@@ -240,7 +240,7 @@
             "poster_path": "/oQRgyQCzcyZvE6w5heM9ktVY0LT.jpg",
             "release_date": "2022-12-25",
             "title": "The Boy, the Mole, the Fox and the Horse",
-            "video": "https://www.youtube.com/watch?v=Fbdem4g_LEc&pp=ygUoVGhlIEJveSwgdGhlIE1vbGUsIHRoZSBGb3ggYW5kIHRoZSBIb3JzZQ%3D%3D",
+            "video": "https://www.youtube.com/embed/Fbdem4g_LEc",
             "vote_average": 8.5,
             "vote_count": 309
         },
@@ -258,7 +258,7 @@
             "poster_path": "/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
             "release_date": "1994-09-10",
             "title": "Pulp Fiction",
-            "video": "https://www.youtube.com/watch?v=tGpTpVyI_OQ&pp=ygUMUHVscCBGaWN0aW9u",
+            "video": "https://www.youtube.com/embed/tGpTpVyI_OQ",
             "vote_average": 8.5,
             "vote_count": 25060
         },
@@ -275,7 +275,7 @@
             "poster_path": "/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg",
             "release_date": "1966-12-23",
             "title": "The Good, the Bad and the Ugly",
-            "video": "https://www.youtube.com/watch?v=WCN5JJY_wiA&pp=ygUeVGhlIEdvb2QsIHRoZSBCYWQgYW5kIHRoZSBVZ2x5",
+            "video": "https://www.youtube.com/embed/WCN5JJY_wiA",
             "vote_average": 8.5,
             "vote_count": 7349
         },
@@ -294,7 +294,7 @@
             "poster_path": "/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
             "release_date": "1994-06-23",
             "title": "Forrest Gump",
-            "video": "https://www.youtube.com/watch?v=bLvqoHBptjg&pp=ygUMRm9ycmVzdCBHdW1w",
+            "video": "https://www.youtube.com/embed/bLvqoHBptjg",
             "vote_average": 8.5,
             "vote_count": 24549
         },
@@ -312,7 +312,7 @@
             "poster_path": "/cIfRCA5wEvj9tApca4UDUagQEiM.jpg",
             "release_date": "2016-02-20",
             "title": "Dou kyu sei Classmates",
-            "video": "https://www.youtube.com/watch?v=R8KZ9WOTU78&pp=ygUWRG91IGt5dSBzZWkgQ2xhc3NtYXRlcw%3D%3D",
+            "video": "https://www.youtube.com/embed/R8KZ9WOTU78",
             "vote_average": 8.5,
             "vote_count": 303
         },
@@ -331,7 +331,7 @@
             "poster_path": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
             "release_date": "2003-12-01",
             "title": "The Lord of the Rings: The Return of the King",
-            "video": "https://www.youtube.com/watch?v=R8KZ9WOTU78&pp=ygUWRG91IGt5dSBzZWkgQ2xhc3NtYXRlcw%3D%3D",
+            "video": "https://www.youtube.com/embed/R8KZ9WOTU78",
             "vote_average": 8.5,
             "vote_count": 21505
         },
@@ -350,7 +350,7 @@
             "poster_path": "/sg7klpt1xwK1IJirBI9EHaqQwJ5.jpg",
             "release_date": "2022-05-20",
             "title": "The Quintessential Quintuplets Movie",
-            "video": "https://www.youtube.com/watch?v=AYxCeeA3LaI&pp=ygUjaGUgUXVpbnRlc3NlbnRpYWwgUXVpbnR1cGxldHMgTW92aWU%3D",
+            "video": "https://www.youtube.com/embed/AYxCeeA3LaI",
             "vote_average": 8.5,
             "vote_count": 213
         },
@@ -368,7 +368,7 @@
             "poster_path": "/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
             "release_date": "1990-09-12",
             "title": "GoodFellas",
-            "video": "https://www.youtube.com/watch?v=2ilzidi_J8Q&pp=ygUKR29vZEZlbGxhcw%3D%3D",
+            "video": "https://www.youtube.com/embed/2ilzidi_J8Q",
             "vote_average": 8.5,
             "vote_count": 11204
         }

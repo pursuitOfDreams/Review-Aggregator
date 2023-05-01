@@ -8,7 +8,7 @@
             "name": "Citadel",
             "original_language": "en",
             "original_name": "Citadel",
-            "overview": "What if you lost your memory? What if a spy didn’t know they were a spy? Years ago, the top agents of Citadel, Mason Kane and Nadia Sinh, had their minds wiped. But, they’re called back to action as sinister forces emerge from the past. With the help of spymaster Bernard Orlick, these former lovers must remember the past to save the future.",
+            "overview": "What if you lost your memory? What if a spy didn't know they were a spy? Years ago, the top agents of Citadel, Mason Kane and Nadia Sinh, had their minds wiped. But, they’re called back to action as sinister forces emerge from the past. With the help of spymaster Bernard Orlick, these former lovers must remember the past to save the future.",
             "poster_path": "/AcrDB32TqpAGwvQFbICALGxSzn3.jpg",
             "media_type": "tv",
             "genre_ids": [
@@ -16,7 +16,7 @@
                 80,
                 10759
             ],
-            "video" : "https://www.youtube.com/watch?v=Ux9qnxnyl6g&pp=ygUHQ2l0YWRlbA%3D%3D",
+            "video" : "https://www.youtube.com/embed/Ux9qnxnyl6g",
             "popularity": 218.446,
             "first_air_date": "2023-04-27",
             "vote_average": 8.317,
@@ -40,7 +40,7 @@
                 10765
             ],
             "popularity": 377.294,
-            "video" : "https://www.youtube.com/watch?v=9zG9RuJb3QU&pp=ygULU3dlZXQgVG9vdGg%3D",
+            "video" : "https://www.youtube.com/embed/9zG9RuJb3QU",
             "first_air_date": "2021-06-04",
             "vote_average": 7.9,
             "vote_count": 1108,
@@ -55,7 +55,7 @@
             "name": "Love & Death",
             "original_language": "en",
             "original_name": "Love & Death",
-            "overview": "The true story of Candy and Pat Montgomery and Betty and Allan Gore – two churchgoing couples enjoying their small town Texas life… until an extramarital affair leads somebody to pick up an axe.",
+            "overview": "The true story of Candy and Pat Montgomery and Betty and Allan Gore - two churchgoing couples enjoying their small town Texas life… until an extramarital affair leads somebody to pick up an axe.",
             "poster_path": "/8WchbT0UPQeo3PZ6G01fhccYaQB.jpg",
             "media_type": "tv",
             "genre_ids": [
@@ -63,7 +63,7 @@
                 18
             ],
             "popularity": 197.707,
-            "video" : "https://www.youtube.com/watch?v=Z778sJGKB3E&pp=ygUOTG92ZSBhbmQgZGVhdGg%3D",
+            "video" : "https://www.youtube.com/embed/Z778sJGKB3E",
             "first_air_date": "2023-04-27",
             "vote_average": 8.81,
             "vote_count": 21,
@@ -86,7 +86,7 @@
                 18
             ],
             "popularity": 93.18,
-            "video" : "https://www.youtube.com/watch?v=YE_9gOc9wWk&pp=ygUJVEhFIG5VUlNF",
+            "video" : "https://www.youtube.com/embed/YE_9gOc9wWk",
             "first_air_date": "2023-04-27",
             "vote_average": 7.5,
             "vote_count": 14,
@@ -108,7 +108,7 @@
                 18
             ],
             "popularity": 41.544,
-            "video" : "https://www.youtube.com/watch?v=5D4XI66Vd3E&pp=ygUQRmF0YWwgQXR0cmFjdGlvbg%3D%3D",
+            "video" : "https://www.youtube.com/embed/5D4XI66Vd3E",
             "first_air_date": "2023-04-30",
             "vote_average": 4.0,
             "vote_count": 2,
@@ -132,7 +132,7 @@
                 18
             ],
             "popularity": 774.794,
-            "video" : "https://www.youtube.com/watch?v=aOC8E8z_ifw&pp=ygULTWFuZGFsb3JpYW4%3D",
+            "video" : "https://www.youtube.com/embed/aOC8E8z_ifw",
             "first_air_date": "2019-11-12",
             "vote_average": 8.481,
             "vote_count": 8926,
@@ -156,7 +156,7 @@
                 10765
             ],
             "popularity": 406.025,
-            "video" : "https://www.youtube.com/watch?v=pDHqAj4eJcM&pp=ygUERlJPTQ%3D%3D",
+            "video" : "https://www.youtube.com/embed/pDHqAj4eJcM",
             "first_air_date": "2022-02-20",
             "vote_average": 8.3,
             "vote_count": 291,
@@ -178,7 +178,7 @@
                 18
             ],
             "popularity": 1.96,
-            "video" : "https://www.youtube.com/watch?v=DXJz8oo7EY8&pp=ygUbVGhlIFBhdGllbnRzIG9mIERyLiBHYXJjw61h",
+            "video" : "https://www.youtube.com/embed/DXJz8oo7EY8",
             "first_air_date": "2023-04-19",
             "vote_average": 7.2,
             "vote_count": 4,
@@ -202,7 +202,7 @@
                 80
             ],
             "popularity": 20.664,
-            "video" : "https://www.youtube.com/watch?v=5t6uuGcKPSI&pp=ygUPVGhlIGxvbmcgc2Vhc29u",
+            "video" : "https://www.youtube.com/embed/5t6uuGcKPSI",
             "first_air_date": "2023-04-22",
             "vote_average": 10.0,
             "vote_count": 4,
@@ -224,7 +224,7 @@
                 18
             ],
             "popularity": 138.863,
-            "video" : "https://www.youtube.com/watch?v=2VjVhGVcNTw&pp=ygUMRHIuIFJvbWFudGlj",
+            "video" : "https://www.youtube.com/embed/2VjVhGVcNTw",
             "first_air_date": "2016-11-07",
             "vote_average": 8.0,
             "vote_count": 58,
@@ -246,7 +246,7 @@
                 18
             ],
             "popularity": 342.916,
-            "video" : "https://www.youtube.com/watch?v=zfbdNfdmQAY&pp=ygULcmFiYml0IGhvbGU%3D",
+            "video" : "https://www.youtube.com/embed/zfbdNfdmQAY",
             "first_air_date": "2023-03-26",
             "vote_average": 7.513,
             "vote_count": 39,
@@ -270,7 +270,7 @@
                 10759
             ],
             "popularity": 413.183,
-            "video" : "https://www.youtube.com/watch?v=KPLWWIOCOOQ&pp=ygUPR2FtZSBvZiB0aHJvbmVz",
+            "video" : "https://www.youtube.com/embed/KPLWWIOCOOQ",
             "first_air_date": "2011-04-17",
             "vote_average": 8.436,
             "vote_count": 21015,
@@ -292,7 +292,7 @@
                 18
             ],
             "popularity": 102.47,
-            "video" : "https://www.youtube.com/watch?v=lV6sJlBbhPs&pp=ygUMVGhlIGRpcGxvbWF0",
+            "video" : "https://www.youtube.com/embed/lV6sJlBbhPs",
             "first_air_date": "2023-04-20",
             "vote_average": 7.538,
             "vote_count": 53,
@@ -316,7 +316,7 @@
                 10759
             ],
             "popularity": 90.798,
-            "video": "https://www.youtube.com/watch?v=bT9csxkth8g&pp=ygUXQVRUQUNLIE9OIFRJVEFOIFRSQUlMRVI%3D",
+            "video": "https://www.youtube.com/embed/bT9csxkth8g",
             "first_air_date": "2013-04-07",
             "vote_average": 8.654,
             "vote_count": 5149,
@@ -341,7 +341,7 @@
                 10765
             ],
             "popularity": 203.995,
-            "video" : "https://www.youtube.com/watch?v=LFgCYUhkxt8&pp=ygUPSGVsbCdzIFBhcmFkaXNl",
+            "video" : "https://www.youtube.com/embed/LFgCYUhkxt8",
             "first_air_date": "2023-04-01",
             "vote_average": 8.9,
             "vote_count": 16,
@@ -365,7 +365,7 @@
                 10765
             ],
             "popularity": 56.198,
-            "video" : "https://www.youtube.com/watch?v=PIOnrEujKl8&pp=ygUKTXJzLiBEYXZpcw%3D%3D",
+            "video" : "https://www.youtube.com/embed/PIOnrEujKl8",
             "first_air_date": "2023-04-20",
             "vote_average": 7.2,
             "vote_count": 17,
@@ -389,7 +389,7 @@
                 9648
             ],
             "popularity": 64.419,
-            "video" : "https://www.youtube.com/watch?v=Ab5wdYr0DbI&pp=ygUHU2FpbnQgWA%3D%3D",
+            "video" : "https://www.youtube.com/embed/Ab5wdYr0DbI",
             "first_air_date": "2023-04-26",
             "vote_average": 8.0,
             "vote_count": 6,
