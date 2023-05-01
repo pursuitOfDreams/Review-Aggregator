@@ -4,6 +4,7 @@ import csv
 import sys
 import json
 import requests
+from tqdm import tqdm
 
 
 def main(args):
@@ -13,21 +14,27 @@ def main(args):
     cursor.execute(open("schema.sql", "r").read())
 
     ########################### Inserting Reviews ############################
-    movie_ids = []
+    title_ids = []
     with open("trending_movie.json",'r') as f:
         data = json.load(f)
     
     for entry in data["results"]:
-        movie_ids.append(entry["id"])
+        title_ids.append(entry["id"])
+
+    with open("trending_tv.json",'r') as f:
+        data = json.load(f)
+    
+    for entry in data["results"]:
+        title_ids.append(entry["id"])
 
     celebs = []
     titleCast = []
     print(40*"="," iserting Celebs ", 40*"=")
-    for movie_id in movie_ids:
+    for movie_id in tqdm(title_ids):
         movie_cast_api = f"https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key=5db95b8fefe73bdb564f6c4f03c46d72&language=en-US"
         res = requests.get(movie_cast_api)
         casts = res.json()["cast"]
-        for cast in casts:
+        for cast in tqdm(casts):
             cast_id = cast["id"]
             cast_api = f"https://api.themoviedb.org/3/person/{cast_id}?api_key=5db95b8fefe73bdb564f6c4f03c46d72&language=en-US"
             res = requests.get(cast_api)
@@ -49,10 +56,10 @@ def main(args):
                 "roleName": cast["character"]
             })
 
-    # with open("celebs.json", 'w') as f:
-    #     json.dump(celebs, f)
+    with open("celebs1.json", 'w') as f:
+        json.dump(celebs, f)
 
-    with open("titleCast.json", 'w') as f:
+    with open("titleCast1.json", 'w') as f:
         json.dump(titleCast, f)
     
     print("done")

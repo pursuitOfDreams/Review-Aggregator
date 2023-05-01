@@ -35,8 +35,8 @@ CREATE TABLE Title(
 CREATE TABLE Celebrities(
     celebId SERIAL, 
     primaryName varchar(255), 
-    birthYear char(4), 
-    deathYear char(4), 
+    birthYear date, 
+    deathYear date, 
     primaryProfession varchar(20), 
     Intro varchar, 
     userId varchar(255), 
