@@ -19,7 +19,7 @@ movie_router.get("/:movie_id", get_movie);
 movie_router.post("/movie_add/add", add_movie);
 movie_router.put("/movie_edit/edit", edit_movie);
 movie_router.get("/top/top250", get_top250_movies);
-movie_router.get("/genre/:genre_id", get_movie_by_genre);
+movie_router.get("/genre/:genre_value", get_movie_by_genre);
 movie_router.get("/tvseries/top250", get_top250_series);
 movie_router.get("/tvseries/genre/:genre_value", get_series_by_genre);
 movie_router.get("/movie/recommended", get_rec);
