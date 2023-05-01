@@ -72,7 +72,7 @@ const add_award_celeb = (award_id, celeb_id) => {
 
 const get_all_awards = () => {
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM (SELECT * FROM awards INNER JOIN title USING (titleid)) LEFT OUTER JOIN (SELECT * FROM celebawards INNER JOIN celebrities USING (celebid)) USING (awardid);',
+        pool.query('SELECT * FROM (SELECT * FROM awards INNER JOIN title USING (titleid)) a LEFT OUTER JOIN (SELECT * FROM celebawards INNER JOIN celebrities USING (celebid)) b USING (awardid);',
         [], (err, results) => {
             if(err) reject(err);
             else resolve(results);
