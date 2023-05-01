@@ -46,7 +46,7 @@ const update_rating = (movie_id) => {
 
 const update_count = (movie_id) => {
     return new Promise((resolve, reject) => {
-        pool.query('UPDATE title SET votecount=(SELECT count(*) FROM reviews GROUP BY titleid HAVING titleid=$1;',
+        pool.query('UPDATE title SET votecount=(SELECT count(*) FROM reviews GROUP BY titleid HAVING titleid=$1);',
         [movie_id]
         , (err, results) => {
             if(err) reject(err);
