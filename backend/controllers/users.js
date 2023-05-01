@@ -6,7 +6,7 @@ const {
     count_update
 } = require("../models/viewers");
 
-const { user_watchlist, watchlist_add, watchlist_delete } = require("../models/watchlist");
+const { user_watchlist, watchlist_add, watchlist_delete, watchlist_cont } = require("../models/watchlist");
 
 const { user_reviews } = require("../models/reviews");
 
@@ -167,7 +167,22 @@ const update_count = async (req, res) => {
     }
 }
 
-
+const in_watchlist = async (req, res) => {
+    try{
+        if(req.session.is_logged_in){
+            const movie_id = req.params.movie_id
+            const watch = await watchlist_cont(req.session.user_id, movie_id)
+            return res.status(201).json({
+                watch : watch
+            })
+        }
+        else return res.status(400).json({message : "Login to view reviews"})
+    }
+    catch(err){
+        console.log(err)
+        return res.status(500).json({message : "Couldn't get reviews"})
+    }
+}
 
 module.exports = {
     check_auth,
@@ -178,5 +193,6 @@ module.exports = {
     get_reviews,
     add_watchlist,
     delete_watchlist,
-    update_count
+    update_count,
+    in_watchlist
 }

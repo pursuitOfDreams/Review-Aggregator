@@ -33,8 +33,20 @@ const watchlist_add = (user_id, title_id) => {
     })
 }
 
+const watchlist_cont = (user_id, title_id) => {
+    return new Promise((resolve, reject) => {
+        pool.query('SELECT * FROM watchlist WHERE titleid=$1 AND userid=$2;',
+        [title_id,user_id]
+        , (err, results) => {
+            if (err) reject(err);
+            else resolve(results);
+        })
+    })
+}
+
 module.exports = {
     user_watchlist,
     watchlist_add,
-    watchlist_delete
+    watchlist_delete,
+    watchlist_cont
 }
