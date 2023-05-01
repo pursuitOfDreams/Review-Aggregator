@@ -68,7 +68,7 @@ const get_title_by_genre = (title_type, genre_id) => {
 
 const recommend = (user_id) => {
     return new Promise((resolve, reject) => {
-        pool.query("SELECT * FROM title WHERE titleid IN (SELECT titleid from title_genre WHERE genreid IN (SELECT genreid FROM genrecount WHERE userid=$1 ORDER BY val DESC LIMIT 3));",
+        pool.query("SELECT * FROM title WHERE titleid IN (SELECT titleid from title_genre WHERE genreid IN (SELECT genreid FROM genre_count WHERE userid=$1 ORDER BY val DESC LIMIT 3));",
         [user_id]
         , (err, results) => {
             if (err) reject(err);
