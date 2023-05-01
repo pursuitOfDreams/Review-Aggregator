@@ -3,6 +3,7 @@ const {
     get_movie_details,
     get_all_movies,
     add_title_to_db,
+    get_top250_movie_details,
     get_top250_series_details,
     get_title_by_genre,
     recommend,
