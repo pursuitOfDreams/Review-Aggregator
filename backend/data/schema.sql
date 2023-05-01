@@ -17,6 +17,7 @@ CREATE TABLE viewer(
     PRIMARY KEY(userId),  
     priorityLevel int
 );
+
 CREATE TABLE Title(
     titleId int, 
     titleType varchar(10), 
