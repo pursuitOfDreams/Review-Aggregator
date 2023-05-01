@@ -48,5 +48,6 @@ const count_update = (user_id, movie_id) => {
 module.exports = {
     get_user_cred,
     insert_user,
-    count_update
+    count_update,
+    insert_user_genre
 }

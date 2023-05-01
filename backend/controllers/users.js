@@ -3,7 +3,8 @@ const bcrypt = require("bcrypt")
 const {
     get_user_cred,
     insert_user,
-    count_update
+    count_update,
+    insert_user_genre
 } = require("../models/viewers");
 
 const { user_watchlist, watchlist_add, watchlist_delete, watchlist_cont } = require("../models/watchlist");
