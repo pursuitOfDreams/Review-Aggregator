@@ -12,6 +12,6 @@ celeb_router.get("/celeb/:celeb_id", get_celeb_info);
 celeb_router.post("/celeb", post_celeb_info);
 celeb_router.put("/celeb", put_celeb_info);
 celeb_router.get("/celeb/movies/:movie_id", get_movie_celeb_info);
-celeb_router.get("/celeb/list", get_celeb_list);
+celeb_router.get("/celebs/list", get_celeb_list);
 
 module.exports = { celeb_router };
