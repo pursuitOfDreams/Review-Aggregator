@@ -23,7 +23,7 @@ const login_user = async (req, res) =>{
         // if the user is found in the database
         if (user_creds.rows.length > 0) {
             const user_password = user_creds.rows[0].user_password;
-            const user_id = user_creds.rows[0].user_id;
+            const user_id = user_creds.rows[0].userid;
             const valid_password = await bcrypt.compare(password, user_password);
             
             // if the password does not match
@@ -153,10 +153,10 @@ const delete_watchlist = async (req, res) => {
 const update_count = async (req, res) => {
     try{
         if(req.session.is_logged_in){
-            const { user_id, movie_id } = req.body
-            const reviews = await count_update(user_id, movie_id)
+            const movie_id = req.params.movie_id
+            const reviews = await count_update(req.session.user_id, movie_id)
             return res.status(201).json({
-                reviews : reviews
+                message : "Count updated"
             })
         }
         else return res.status(400).json({message : "Login to view reviews"})

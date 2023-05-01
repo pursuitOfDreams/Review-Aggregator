@@ -12,7 +12,7 @@ user_router.get('/watchlist/add/:movie_id', add_watchlist);
 user_router.get('/watchlist/delete/:movie_id', delete_watchlist);
 user_router.get('/watchlist/:movie_id', in_watchlist);
 user_router.get('/reviews/:user_id', get_reviews);
-user_router.post('/visit', update_count);
+user_router.get('/visit/:user_id', update_count);
 
 module.exports = {
     auth_router,
