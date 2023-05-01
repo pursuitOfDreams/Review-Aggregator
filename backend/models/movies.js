@@ -88,6 +88,17 @@ const popular = (movie_id) => {
     })
 }
 
+const get_genres = (movie_id) => {
+    return new Promise((resolve, reject) => {
+        pool.query("SELECT genrename FROM genre WHERE genreid IN (SELECT genreid FROM title_genre WHERE titleid=$1);",
+        [movie_id]
+        , (err, results) => {
+            if (err) reject(err);
+            else resolve(results);
+        })
+    })
+}
+
 module.exports = {
     get_movie_details,
     get_all_movies,
@@ -96,5 +107,6 @@ module.exports = {
     get_top250_series_details,
     get_title_by_genre,
     recommend,
-    popular
+    popular,
+    get_genres
 }

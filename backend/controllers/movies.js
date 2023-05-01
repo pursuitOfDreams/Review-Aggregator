@@ -6,7 +6,8 @@ const {
     get_top250_series_details,
     get_title_by_genre,
     recommend,
-    popular
+    popular,
+    get_genres
 } = require("../models/movies");
 
 const get_movie = async (req, res) =>{
@@ -155,6 +156,21 @@ const get_popular_movies = async (req, res) => {
     }
 }
 
+const get_movie_genre = async (req, res) => {
+    try{
+        if (req.session.is_logged_in){
+            const movie_id = req.params.movie_id;
+            const genres = get_genres(movie_id)
+            return res.status(200).json({genres : genres});
+        }
+        else return res.status(400).json({message : "Login to access the link"})
+    }
+    catch (err) {
+        console.log(err);
+        return res.status(500).json({message : "Server error"});
+    }
+}
+
 module.exports ={
     get_movie,
     get_movie_list,
@@ -165,6 +181,7 @@ module.exports ={
     get_movie_by_genre,
     get_series_by_genre,
     get_rec,
-    get_popular_movies
+    get_popular_movies,
+    get_movie_genre
 }
 
