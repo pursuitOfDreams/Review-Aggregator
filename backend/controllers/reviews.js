@@ -39,6 +39,7 @@ const post_movie_reviews = async (req, res) => {
             }
             const post = await post_rev(movie_id, user_id, reviewtext, rating);
             const update = await update_rating(movie_id);
+            const count = await update_count(movie_id);
             return res.status(201).json({message : "Uploaded review"})
         }
         else

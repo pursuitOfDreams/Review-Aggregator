@@ -13,7 +13,18 @@ const get_user_cred = (user_id) =>{
 
 const insert_user = (user_id, user_name, user_password) => {
     return new Promise((resolve, reject) => {
-        pool.query('INSERT INTO viewer values ($1, $2, $3, 0); INSERT INTO genre_count (SELECT $1,genreid,0 FROM genre);',
+        pool.query('INSERT INTO viewer values ($1, $2, $3, 0);',
+        [user_id, user_name, user_password]
+        , (err, results) => {
+            if (err) reject(err);
+            else resolve(results);
+        })
+    })
+}
+
+const insert_user_genre = (user_id, user_name, user_password) => {
+    return new Promise((resolve, reject) => {
+        pool.query('INSERT INTO genre_count (SELECT $1,genreid,0 FROM genre);',
         [user_id, user_name, user_password]
         , (err, results) => {
             if (err) reject(err);
