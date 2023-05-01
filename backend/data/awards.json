@@ -1,0 +1,136 @@
+[
+    {
+        "awardId" : 1,
+        "award_name" : "Oscar",
+        "category" : "Best Movie",
+        "year" : "1973",
+        "titleID" : 238 
+    },
+    {
+        "awardId" : 2,
+        "award_name" : "Oscar",
+        "category" : "Best Actor",
+        "year" : "1973",
+        "titleID" : 238 
+    },
+    {
+        "awardId" : 3,
+        "award_name" : "Oscar",
+        "category" : "Best Writing",
+        "year" : "1973",
+        "titleID" : 238 
+    },
+    {
+        "awardId" : 4,
+        "award_name" : "Oscar",
+        "category" : "Best Movie",
+        "year" : "1975",
+        "titleID" : 240 
+    },
+    {
+        "awardId" : 5,
+        "award_name" : "Oscar",
+        "category" : "Best Suppporting Actor",
+        "year" : "1975",
+        "titleID" : 240 
+    },
+    {
+        "awardId" : 6,
+        "award_name" : "Oscar",
+        "category" : "Best Director",
+        "year" : "1975",
+        "titleID" : 238 
+    },
+    {
+        "awardId" : 7,
+        "award_name" : "Oscar",
+        "category" : "Best Movie",
+        "year" : "19994",
+        "titleID" : 424 
+    },
+    {
+        "awardId" : 8,
+        "award_name" : "Oscar",
+        "category" : "Best Director",
+        "year" : "1994",
+        "titleID" : 424
+    },
+    {
+        "awardId" : 9,
+        "award_name" : "Oscar",
+        "category" : "Best Writing",
+        "year" : "1994",
+        "titleID" : 424 
+    },
+    {
+        "awardId" : 10,
+        "award_name" : "Oscar",
+        "category" : "Best Animated Feature",
+        "year" : "2003",
+        "titleID" : 129 
+    },
+    {
+        "awardId" : 11,
+        "award_name" : "Oscar",
+        "category" : "Best Movie",
+        "year" : "2020",
+        "titleID" : 496243 
+    },
+    {
+        "awardId" : 12,
+        "award_name" : "Oscar",
+        "category" : "Best Actor Supporting",
+        "year" : "2009",
+        "titleID" : 155 
+    },
+    {
+        "awardId" : 13,
+        "award_name" : "Oscar",
+        "category" : "Best Music",
+        "year" : "1994",
+        "titleID" : 424 
+    },
+    {
+        "awardId" : 14,
+        "award_name" : "Oscar",
+        "category" : "Best Writing",
+        "year" : "1995",
+        "titleID" : 680 
+    },
+    {
+        "awardId" : 15,
+        "award_name" : "Oscar",
+        "category" : "Best Movie",
+        "year" : "1995",
+        "titleID" : 13 
+    },
+    {
+        "awardId" : 16,
+        "award_name" : "Oscar",
+        "category" : "Best Movie",
+        "year" : "2004",
+        "titleID" : 122
+    },
+    {
+        "awardId" : 17,
+        "award_name" : "Oscar",
+        "category" : "Best Music",
+        "year" : "2004",
+        "titleID" : 122
+    },
+    {
+        "awardId" : 18,
+        "award_name" : "Oscar",
+        "category" : "Best Director",
+        "year" : "2004",
+        "titleID" : 122
+    },
+    {
+        "awardId" : 19,
+        "award_name" : "Oscar",
+        "category" : "Best Supporting Actor",
+        "year" : "1991",
+        "titleID" : 769
+    }
+    
+]
