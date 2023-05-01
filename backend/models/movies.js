@@ -77,6 +77,17 @@ const recommend = (user_id) => {
     })
 }
 
+const popular = (movie_id) => {
+    return new Promise((resolve, reject) => {
+        pool.query("SELECT * FROM title INNER JOIN titlecast USING (titleid) WHERE celebid=$1;",
+        [movie_id]
+        , (err, results) => {
+            if (err) reject(err);
+            else resolve(results);
+        })
+    })
+}
+
 module.exports = {
     get_movie_details,
     get_all_movies,
@@ -84,5 +95,6 @@ module.exports = {
     get_top250_movie_details,
     get_top250_series_details,
     get_title_by_genre,
-    recommend
+    recommend,
+    popular
 }
