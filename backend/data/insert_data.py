@@ -219,6 +219,41 @@ def main(args):
     execute_values(cursor, query, titleCast)
     connection.commit()
 
+    print(40*"="," inserting awards ", 40*"=")
+
+    with open("awards.json",'r') as f:
+        data = json.load(f)
+
+    awards = set()
+    for entry in data:
+        awards.add(tuple([
+            entry["awardId"],
+            entry["award_name"],
+            entry["category"],
+            entry["year"],
+            entry["titleID"],
+        ]))
+
+    query = "INSERT INTO Awards VALUES %s"
+    execute_values(cursor, query, list(awards))
+    connection.commit()
+
+    print(40*"="," inserting celeb awards ", 40*"=")
+
+    with open("celeb_awards.json",'r') as f:
+        data = json.load(f)
+
+    celebAwards = set()
+    for entry in data:
+        celebAwards.add(tuple([
+            entry["celebID"],
+            entry["awardID"]
+        ]))
+
+    query = "INSERT INTO celebAwards VALUES %s"
+    execute_values(cursor, query, list(celebAwards))
+    connection.commit()
+
     if connection:
         cursor.close()
         connection.close()
